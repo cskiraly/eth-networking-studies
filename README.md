@@ -18,6 +18,45 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | `discv5-crawler` | [Crawling the Ethereum discv5 network, fast](https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962), 2024-11-12 |
 | `batch-publishing` | [Improving DAS performance with GossipSub Batch Publishing](https://ethresear.ch/t/improving-das-performance-with-gossipsub-batch-publishing/21713), 2025-02-10 |
 | `pppt` | [PPPT: Fighting the GossipSub Overhead with Push-Pull Phase Transition](https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118), 2025-04-09 |
+| `rowdas` | [EIP-8371: RowDAS, distributed blobspace reconstruction](https://ethereum-magicians.org/t/eip-8371-rowdas-distributed-blobspace-reconstruction/29320) |
+
+## `rowdas`
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `prysm/` | [cskiraly/prysm](https://github.com/cskiraly/prysm), branch `rowdas` | `2cec8fe20a` | RowDAS behind `--row-das`; the harness `beacon-chain/p2p/rowintegrationtest` and the in-process instruments `testing/gossipsim` |
+| `go-libp2p-pubsub/` | [cskiraly/go-libp2p-pubsub](https://github.com/cskiraly/go-libp2p-pubsub), branch `rowdas-partial-messages` | `115d7f6949` | `SetPartialInterest`, `RegisterPartial`, `PublishAction.OnSent`, the experiment machinery |
+| `simnet/` | [cskiraly/simnet](https://github.com/cskiraly/simnet), branch `burst-window` | `816b7ffb26` | `LinkSettings.BurstWindow` |
+| `eth-networking-lab/` | [cskiraly/eth-networking-lab](https://github.com/cskiraly/eth-networking-lab) | `2167ef4` | the instruments extracted from `testing/gossipsim` as a standalone module, published alongside; the study ran the copy inside Prysm |
+
+The Prysm branch's `go.mod` already replaces the two libraries with these exact fork commits,
+so a build inside `prysm/` uses them without further configuration; the fork directories are
+here to be read and diffed. The experiments are Go tests under
+`prysm/beacon-chain/p2p/rowintegrationtest`; the changelog fragment
+`prysm/changelog/cskiraly_rowdas.md` summarises the change.
+
+```sh
+git clone --recurse-submodules https://github.com/cskiraly/eth-networking-studies
+cd eth-networking-studies && git checkout rowdas && git submodule update --init
+cd prysm && go test -count=1 -run 'TestR' ./beacon-chain/p2p/rowintegrationtest/
+```
+
+**Cite as.** Csaba Kiraly, "RowDAS (EIP-8371): Distributed Blob Reconstruction, measured", ethresear.ch, 3 September 2026, <https://ethresear.ch/t/rowdas-eip-8371-distributed-blob-reconstruction-measured/25897>. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `rowdas`. The EIP itself is discussed at <https://ethereum-magicians.org/t/eip-8371-rowdas-distributed-blobspace-reconstruction/29320>.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2026rowdas,
+  author       = {Kiraly, Csaba},
+  title        = {{RowDAS} ({EIP-8371}): distributed blob reconstruction, measured},
+  howpublished = {ethresear.ch},
+  year         = {2026},
+  month        = sep,
+  url          = {https://ethresear.ch/t/rowdas-eip-8371-distributed-blob-reconstruction-measured/25897},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag rowdas}
+}
+```
+</details>
 
 ## `pppt`
 

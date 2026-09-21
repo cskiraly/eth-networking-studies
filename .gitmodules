@@ -1,6 +1,12 @@
-[submodule "das-simulator-nim"]
-	path = das-simulator-nim
-	url = https://github.com/cskiraly/das-simulator-nim
-[submodule "nim-libp2p"]
-	path = nim-libp2p
-	url = https://github.com/cskiraly/nim-libp2p
+[submodule "prysm"]
+	path = prysm
+	url = https://github.com/cskiraly/prysm
+[submodule "go-libp2p-pubsub"]
+	path = go-libp2p-pubsub
+	url = https://github.com/cskiraly/go-libp2p-pubsub
+[submodule "simnet"]
+	path = simnet
+	url = https://github.com/cskiraly/simnet
+[submodule "eth-networking-lab"]
+	path = eth-networking-lab
+	url = https://github.com/cskiraly/eth-networking-lab
