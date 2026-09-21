@@ -10,3 +10,9 @@
 [submodule "eth-networking-lab"]
 	path = eth-networking-lab
 	url = https://github.com/cskiraly/eth-networking-lab
+[submodule "prysm-variant-a"]
+	path = prysm-variant-a
+	url = https://github.com/cskiraly/prysm
+[submodule "go-libp2p-pubsub-variant-a"]
+	path = go-libp2p-pubsub-variant-a
+	url = https://github.com/cskiraly/go-libp2p-pubsub
