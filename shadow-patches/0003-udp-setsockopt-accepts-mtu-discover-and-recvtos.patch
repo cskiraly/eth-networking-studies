@@ -1,0 +1,26 @@
+diff --git a/src/main/host/descriptor/socket/inet/udp.rs b/src/main/host/descriptor/socket/inet/udp.rs
+index af0088943..ad192c73f 100644
+--- a/src/main/host/descriptor/socket/inet/udp.rs
++++ b/src/main/host/descriptor/socket/inet/udp.rs
+@@ -970,6 +970,21 @@ impl UdpSocket {
+                 warn_once_then_debug!("setsockopt SO_KEEPALIVE not yet implemented for udp");
+                 return Err(Errno::ENOPROTOOPT.into());
+             }
++            // Local patch (payload-segmentation cross-check): quic-go refuses to listen unless it
++            // can set don't-fragment; Shadow never fragments, so accepting is exact.
++            (libc::IPPROTO_IP, libc::IP_MTU_DISCOVER) | (libc::IPPROTO_IPV6, libc::IPV6_MTU_DISCOVER) => {
++                warn_once_then_debug!(
++                    "setsockopt IP(V6)_MTU_DISCOVER accepted and ignored (local patch)"
++                );
++            }
++            // Local patch (payload-segmentation cross-check): quic-go refuses to listen unless it
++            // can ask for the TOS byte of received datagrams; no TOS control message is ever
++            // delivered, so quic-go's ECN validation fails closed, as over an ECN-less network.
++            (libc::IPPROTO_IP, libc::IP_RECVTOS) | (libc::IPPROTO_IPV6, libc::IPV6_RECVTCLASS) => {
++                warn_once_then_debug!(
++                    "setsockopt IP_RECVTOS/IPV6_RECVTCLASS accepted and ignored (local patch)"
++                );
++            }
+             (libc::SOL_SOCKET, libc::SO_BROADCAST) => {
+                 type OptType = libc::c_int;
+ 

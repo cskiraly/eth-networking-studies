@@ -1,0 +1,20 @@
+diff --git a/src/main/host/syscall/handler/sched.rs b/src/main/host/syscall/handler/sched.rs
+index 4ddf23d3f..b8807ec65 100644
+--- a/src/main/host/syscall/handler/sched.rs
++++ b/src/main/host/syscall/handler/sched.rs
+@@ -39,10 +39,11 @@ impl SyscallHandler {
+         let mask_ptr = mask_ptr.cast::<u8>();
+         let mask_ptr = ForeignArrayPtr::new(mask_ptr, cpusetsize);
+ 
+-        let tid = ThreadId::try_from(tid).or(Err(Errno::ESRCH))?;
+-        if !ctx.objs.host.has_thread(tid) && kernel_pid_t::from(tid) != 0 {
+-            return Err(Errno::ESRCH);
+-        }
++        // Local patch (payload-segmentation cross-check): the main thread's tid in glibc is the
++        // native one, set by set_tid_address before the shim interposes, and pthread_getattr_np
++        // passes it here from Go's cgo start-up. Refusing it leaves Go's stack bounds
++        // uninitialised. Any tid is answered as the calling thread.
++        let _ = ThreadId::try_from(tid).or(Err(Errno::ESRCH))?;
+ 
+         // Shadow doesn't have users, so no need to check for permissions
+ 

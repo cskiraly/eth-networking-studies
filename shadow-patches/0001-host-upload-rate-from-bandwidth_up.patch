@@ -1,0 +1,13 @@
+diff --git a/src/main/core/sim_config.rs b/src/main/core/sim_config.rs
+index 8a967999c..133557972 100644
+--- a/src/main/core/sim_config.rs
++++ b/src/main/core/sim_config.rs
+@@ -250,7 +250,7 @@ fn build_host(
+             .bandwidth_down
+             .map(|x| x.convert(units::SiPrefixUpper::Base).unwrap().value()),
+         bandwidth_up_bits: host
+-            .bandwidth_down
++            .bandwidth_up
+             .map(|x| x.convert(units::SiPrefixUpper::Base).unwrap().value()),
+ 
+         ip_addr: host.ip_addr.map(|x| x.into()),

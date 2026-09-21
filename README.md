@@ -20,6 +20,44 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | `pppt` | [PPPT: Fighting the GossipSub Overhead with Push-Pull Phase Transition](https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118), 2025-04-09 |
 | `rowdas` | [EIP-8371: RowDAS, distributed blobspace reconstruction](https://ethereum-magicians.org/t/eip-8371-rowdas-distributed-blobspace-reconstruction/29320), 2026-08-31 |
 | `segmentation-part2` | [Wen fast payload broadcast? Segment, code, push, pull, and everything in between](https://ethresear.ch/t/wen-fast-payload-broadcast-segment-code-push-pull-and-everything-in-between/25913) and [EIP-8411: what segmented payload diffusion is made of](https://ethresear.ch/t/eip-8411-what-segmented-payload-diffusion-is-made-of/26025), 2026-09-17 |
+| `shadow-crosscheck` | the two-simulator cross-check of the segmentation results under Shadow, 2026-09 (post and report forthcoming) |
+
+## `shadow-crosscheck`
+
+The segmentation results rerun cell by cell under the [Shadow](https://shadow.github.io/)
+simulator, over QUIC and over TCP, beside their in-process twins.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `prysm/` | [cskiraly/prysm](https://github.com/cskiraly/prysm), branch `payload-segmentation-snapshot` | `7b6be95ba2` | the research tree the cells ran (`af6e41eb7d` without its notes, plus the previous snapshot's `testing/segstudy`): the Shadow node `TestShadowNode` and the topology export in `beacon-chain/p2p/segmentintegrationtest`, the arm catalogue and cell scripts for both substrates in `testing/shadowstudy`, the two library forks vendored under `third_party/` |
+| `eth-networking-lab/` | [cskiraly/eth-networking-lab](https://github.com/cskiraly/eth-networking-lab), tag `shadow-crosscheck-2026-09` | `bddd48c` | the Shadow tooling in `shadowsim/`: topology to Shadow config, the stall watchdog, the record extractor, the pairing; the cells ran at `0a29198`, which this tag carries plus later fixes to the same tools |
+| `shadow/` | [shadow/shadow](https://github.com/shadow/shadow), release 3.3.0 | `5a05740ba` | the simulator |
+| `shadow-patches/` | this repository | | three patches the cells' Shadow carried: hosts get their upload rate from `bandwidth_up` (fixed upstream in `28cca3873`, unreleased), `sched_getaffinity` no longer checks that the tid belongs to a known thread and answers for the calling thread (Go's cgo start-up passes glibc's native main-thread tid, which Shadow did not know), UDP `setsockopt` accepts the don't-fragment and receive-TOS requests quic-go makes |
+
+At this tag the other submodules of the earlier publications do not exist: both forks are
+vendored inside `prysm/third_party/` at the commits `segmentation-part2` pinned. `prysm/go.mod`
+replaces `eth-networking-lab` with `../eth-networking-lab`, which is the sibling directory here.
+
+`build.sh` builds the patched Shadow and the node binary. One cell on each substrate, from
+`prysm/testing/shadowstudy/` (details in its README and in the lab's `shadowsim/tools/README.md`):
+
+```sh
+git checkout shadow-crosscheck && git submodule update --init && ./build.sh
+export STUDY=$PWD/prysm/testing/shadowstudy BIN=$PWD/bin/segshadow.test RES=$PWD/results
+$STUDY/cell.sh shadow  atuned_32k 7 quic 500 p1m            # Shadow over QUIC
+$STUDY/cell.sh shadow  atuned_32k 7 tcp  500 p1m            # Shadow over TCP
+$STUDY/cell.sh harness atuned_32k 7 quic 500 p1m            # the in-process twin
+QDISC=round-robin $STUDY/cell.sh shadow wholend 7 tcp 500 p1m   # the fair-share queue cell
+python3 -B eth-networking-lab/shadowsim/tools/compare.py --shadow results --harness results
+```
+
+`cell.sh` writes every record into `RES`, Shadow and twin alike, and `compare.py` pairs the
+Shadow records in a directory with the harness records in it. A 500-node cell needs about
+10 GB of memory and a few minutes. Identical inputs and seeds do not guarantee identical Shadow
+results, even within a session; treat each run as a sample and compare medians over paired
+seeds, as the lab's tools guide explains.
+
+**Cite as.** The post and the technical report are forthcoming; their citations are added here when they are up. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `shadow-crosscheck`.
 
 ## `segmentation-part2`
 
