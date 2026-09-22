@@ -25,12 +25,14 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 ## `shadow-crosscheck`
 
 The segmentation results rerun cell by cell under the [Shadow](https://shadow.github.io/)
-simulator, over QUIC and over TCP, beside their in-process twins.
+simulator, over QUIC and over TCP, beside their in-process twins; and the same node run as one
+process per Linux network namespace on the real kernel stack, with the links shaped by the
+kernel's traffic control.
 
 | directory | repository | commit | role |
 | --- | --- | --- | --- |
-| `prysm/` | [cskiraly/prysm](https://github.com/cskiraly/prysm), branch `payload-segmentation-snapshot` | `7b6be95ba2` | the research tree the cells ran (`af6e41eb7d` without its notes, plus the previous snapshot's `testing/segstudy`): the Shadow node `TestShadowNode` and the topology export in `beacon-chain/p2p/segmentintegrationtest`, the arm catalogue and cell scripts for both substrates in `testing/shadowstudy`, the two library forks vendored under `third_party/` |
-| `eth-networking-lab/` | [cskiraly/eth-networking-lab](https://github.com/cskiraly/eth-networking-lab), tag `shadow-crosscheck-2026-09` | `bddd48c` | the Shadow tooling in `shadowsim/`: topology to Shadow config, the stall watchdog, the record extractor, the pairing; the cells ran at `0a29198`, which this tag carries plus later fixes to the same tools |
+| `prysm/` | [cskiraly/prysm](https://github.com/cskiraly/prysm), branch `payload-segmentation-snapshot` | `c4d72f7959` | the research tree the cells ran (`af6e41eb7d` without its notes, plus the previous snapshot's `testing/segstudy`): the Shadow node `TestShadowNode` and the topology export in `beacon-chain/p2p/segmentintegrationtest`, the arm catalogue and cell scripts for both substrates in `testing/shadowstudy`, the two library forks vendored under `third_party/`. The real-stack cells ran the node with its dial deadline and handshake bound taken from the cell (`0871156c89`), which this commit carries on the snapshot |
+| `eth-networking-lab/` | [cskiraly/eth-networking-lab](https://github.com/cskiraly/eth-networking-lab) | `ea9248b` | the Shadow tooling in `shadowsim/`: topology to Shadow config, the stall watchdog, the record extractor, the pairing; and the namespace backend (`nsrun.py`, `nsmesh.py`, `nsextract.py`, `nsunpriv.sh`), which runs the same node on the real Linux network stack. The Shadow cells ran at `0a29198`, the real-stack cells at this commit |
 | `shadow/` | [shadow/shadow](https://github.com/shadow/shadow), release 3.3.0 | `5a05740ba` | the simulator |
 | `shadow-patches/` | this repository | | three patches the cells' Shadow carried: hosts get their upload rate from `bandwidth_up` (fixed upstream in `28cca3873`, unreleased), `sched_getaffinity` no longer checks that the tid belongs to a known thread and answers for the calling thread (Go's cgo start-up passes glibc's native main-thread tid, which Shadow did not know), UDP `setsockopt` accepts the don't-fragment and receive-TOS requests quic-go makes |
 
@@ -56,6 +58,21 @@ Shadow records in a directory with the harness records in it. A 500-node cell ne
 10 GB of memory and a few minutes. Identical inputs and seeds do not guarantee identical Shadow
 results, even within a session; treat each run as a sample and compare medians over paired
 seeds, as the lab's tools guide explains.
+
+The same cells on the real network stack, at 100 nodes: one process per node in its own
+network namespace, virtual links at the topology's rates and delays, the uplink queue a FIFO
+or fq_codel. No root is needed, only a kernel with unprivileged user namespaces and the
+`iproute2` tools; the machine's CPU is shared by every node, so the records carry the host's
+load and a cell counts as a network measurement only when the host had headroom while the
+payload spread (the lab's guide, under Validity).
+
+```sh
+python3 -B eth-networking-lab/shadowsim/tools/nsmesh.py --study $STUDY --binary $BIN \
+  --sizes 100 --delay-scope neighbours --out mesh100     # plans: three arms × two transports × two queues
+eth-networking-lab/shadowsim/tools/nsunpriv.sh mesh100/run-all.sh   # builds, runs three times, extracts
+python3 -B eth-networking-lab/shadowsim/tools/compare.py --backend shadow=results \
+  --backend harness=results --backend netns=mesh100      # ratios to Shadow; --reference-backend harness for fq_codel
+```
 
 **Cite as.** The post and the technical report are forthcoming; their citations are added here when they are up. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `shadow-crosscheck`.
 

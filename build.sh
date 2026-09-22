@@ -23,5 +23,6 @@ CGO_ENABLED=1 go test -c -ldflags=-linkmode=external -o "$here/bin/segshadow.tes
 git rev-parse HEAD > "$here/bin/segshadow.test.commit"   # extract.py records it in every result
 ldd "$here/bin/segshadow.test" | head -1
 sha256sum "$here/bin/segshadow.test"
-echo "the published cells ran a binary with sha256 8d07d183d3b9c2c31393d05f7262d5ea29f8bd73d30e83d6e12f8a87ea263b88,"
-echo "built on Debian 12 (glibc 2.36) with Go 1.26; a different toolchain gives a different hash and the same program."
+echo "the Shadow and harness cells of sections 1 to 9 ran a binary with sha256 8d07d183d3b9c2c31393d05f7262d5ea29f8bd73d30e83d6e12f8a87ea263b88"
+echo "(the previous snapshot), the real-stack cells one with sha256 0c1488abf12ea4e62e9f080f0b4136fc8a4307b8d4ba5653a190a02379560163,"
+echo "both built on Debian 12 (glibc 2.36) with Go 1.26; a different toolchain gives a different hash and the same program."
