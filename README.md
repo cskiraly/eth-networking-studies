@@ -16,6 +16,46 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | --- | --- |
 | `fulldas` | [FullDAS: towards massive scalability with 32MB blocks and beyond](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529), 2024-05-11 |
 | `discv5-crawler` | [Crawling the Ethereum discv5 network, fast](https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962), 2024-11-12 |
+| `batch-publishing` | [Improving DAS performance with GossipSub Batch Publishing](https://ethresear.ch/t/improving-das-performance-with-gossipsub-batch-publishing/21713), 2025-02-10 |
+
+## `batch-publishing`
+
+[Improving DAS performance with GossipSub Batch Publishing](https://ethresear.ch/t/improving-das-performance-with-gossipsub-batch-publishing/21713)
+linked the two DAS simulators and the `batch-publish` branch of the author's nim-libp2p fork;
+the author's comment under the post linked the branch's two commits over `507242370`. The
+simulators are at the last commits on their linked branches before the post went up on
+2025-02-10, which are still their tips.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `das-research/` | [logos-storage/das-research](https://github.com/logos-storage/das-research), branch `master` | `c53043bab` | the Python DAS simulator, unchanged since `fulldas` |
+| `das-simulator-nim/` | [cskiraly/das-simulator-nim](https://github.com/cskiraly/das-simulator-nim), branch `main` | `4ba1a698e` | the Nim DAS simulator with the FullDAS branch merged, the Shadow configuration templated and Shadow's memory manager in use (2024-09-10). Its vendored nim-libp2p is still `ee5eda960`, older than the branch below |
+| `nim-libp2p/` | [cskiraly/nim-libp2p](https://github.com/cskiraly/nim-libp2p), branch `batch-publish` | `ba11226b1` | `batchPublish` in `libp2p/protocols/pubsub/gossipsub.nim`: `ea8c22314` factors the publish path, `ba11226b1` adds the batch call (2025-02-07) |
+
+Build as in `fulldas`; to run the simulator against the batch-publish branch, point its vendored
+copy at `nim-libp2p/`.
+
+```sh
+git checkout batch-publishing && git submodule update --init --recursive
+git -C nim-libp2p log --oneline 507242370..HEAD
+```
+
+**Cite as.** Csaba Kiraly, "Improving DAS performance with GossipSub Batch Publishing", ethresear.ch, 10 February 2025, <https://ethresear.ch/t/improving-das-performance-with-gossipsub-batch-publishing/21713>. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `batch-publishing`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2025batchpublishing,
+  author       = {Kiraly, Csaba},
+  title        = {Improving {DAS} performance with {GossipSub} batch publishing},
+  howpublished = {ethresear.ch},
+  year         = {2025},
+  month        = feb,
+  url          = {https://ethresear.ch/t/improving-das-performance-with-gossipsub-batch-publishing/21713},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag batch-publishing}
+}
+```
+</details>
 
 ## `discv5-crawler`
 

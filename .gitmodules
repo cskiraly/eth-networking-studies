@@ -1,3 +1,9 @@
-[submodule "fast-ethereum-crawler"]
-	path = fast-ethereum-crawler
-	url = https://github.com/cskiraly/fast-ethereum-crawler
+[submodule "das-research"]
+	path = das-research
+	url = https://github.com/logos-storage/das-research
+[submodule "das-simulator-nim"]
+	path = das-simulator-nim
+	url = https://github.com/cskiraly/das-simulator-nim
+[submodule "nim-libp2p"]
+	path = nim-libp2p
+	url = https://github.com/cskiraly/nim-libp2p
