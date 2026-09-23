@@ -15,6 +15,41 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | tag | publication |
 | --- | --- |
 | `fulldas` | [FullDAS: towards massive scalability with 32MB blocks and beyond](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529), 2024-05-11 |
+| `discv5-crawler` | [Crawling the Ethereum discv5 network, fast](https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962), 2024-11-12 |
+
+## `discv5-crawler`
+
+[Crawling the Ethereum discv5 network, fast](https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962)
+linked one repository and no commit. The pin is the last commit on `master` before the post
+went up on 2024-11-12, committed five minutes earlier.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `fast-ethereum-crawler/` | [cskiraly/fast-ethereum-crawler](https://github.com/cskiraly/fast-ethereum-crawler), branch `master` | `0a031926a` | `dcrawl`: the crawler built on nim-eth's discv5, its faster exploration of the node-ID space, the crawl loop with its cycle and discovery-file options, and the post-processing plots. Its own submodules vendor the author's fork of [status-im/nim-eth](https://github.com/status-im/nim-eth) and the Nimbus build system |
+
+The crawler's README has the build (`make update`, then `make`) and the `run.sh` options.
+
+```sh
+git checkout discv5-crawler && git submodule update --init --recursive
+cat fast-ethereum-crawler/README.md
+```
+
+**Cite as.** Csaba Kiraly, "Crawling the Ethereum discv5 network, fast", ethresear.ch, 12 November 2024, <https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962>. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `discv5-crawler`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2024crawler,
+  author       = {Kiraly, Csaba},
+  title        = {Crawling the {Ethereum} {discv5} network, fast},
+  howpublished = {ethresear.ch},
+  year         = {2024},
+  month        = nov,
+  url          = {https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag discv5-crawler}
+}
+```
+</details>
 
 ## `fulldas`
 
