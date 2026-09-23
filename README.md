@@ -20,7 +20,7 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | `pppt` | [PPPT: Fighting the GossipSub Overhead with Push-Pull Phase Transition](https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118), 2025-04-09 |
 | `rowdas` | [EIP-8371: RowDAS, distributed blobspace reconstruction](https://ethereum-magicians.org/t/eip-8371-rowdas-distributed-blobspace-reconstruction/29320), 2026-08-31 |
 | `segmentation-part2` | [Wen fast payload broadcast? Segment, code, push, pull, and everything in between](https://ethresear.ch/t/wen-fast-payload-broadcast-segment-code-push-pull-and-everything-in-between/25913) and [EIP-8411: what segmented payload diffusion is made of](https://ethresear.ch/t/eip-8411-what-segmented-payload-diffusion-is-made-of/26025), 2026-09-17 |
-| `shadow-crosscheck` | the two-simulator cross-check of the segmentation results under Shadow, 2026-09 (post and report forthcoming) |
+| `shadow-crosscheck` | [EIP-8411 payload segmentation under the Shadow simulator](https://ethresear.ch/t/eip-8411-payload-segmentation-under-the-shadow-simulator/26070) and its technical report [EIP-8411 payload segmentation under Shadow: a cross-check of the simulations](https://notes.ethereum.org/@cskiraly/EIP-8411-shadow-cross-check), 2026-09-23 |
 
 ## `shadow-crosscheck`
 
@@ -75,7 +75,31 @@ python3 -B eth-networking-lab/shadowsim/tools/compare.py --backend shadow=result
   --queue-agnostic harness   # ratios to Shadow; --reference-backend harness pairs the fq_codel cells with the harness
 ```
 
-**Cite as.** The post and the technical report are forthcoming; their citations are added here when they are up. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `shadow-crosscheck`.
+**Cite as.** Csaba Kiraly, "EIP-8411 payload segmentation under the Shadow simulator", ethresear.ch, 23 September 2026, <https://ethresear.ch/t/eip-8411-payload-segmentation-under-the-shadow-simulator/26070>; the technical report is Csaba Kiraly, "EIP-8411 payload segmentation under Shadow: a cross-check of the simulations", notes.ethereum.org, 23 September 2026, <https://notes.ethereum.org/@cskiraly/EIP-8411-shadow-cross-check>. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `shadow-crosscheck`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2026shadowpost,
+  author       = {Kiraly, Csaba},
+  title        = {{EIP-8411} payload segmentation under the {Shadow} simulator},
+  howpublished = {ethresear.ch},
+  year         = {2026},
+  month        = sep,
+  url          = {https://ethresear.ch/t/eip-8411-payload-segmentation-under-the-shadow-simulator/26070},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag shadow-crosscheck}
+}
+@misc{kiraly2026shadowreport,
+  author       = {Kiraly, Csaba},
+  title        = {{EIP-8411} payload segmentation under {Shadow}: a cross-check of the simulations},
+  howpublished = {notes.ethereum.org, technical report},
+  year         = {2026},
+  month        = sep,
+  url          = {https://notes.ethereum.org/@cskiraly/EIP-8411-shadow-cross-check},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag shadow-crosscheck}
+}
+```
+</details>
 
 ## `segmentation-part2`
 
