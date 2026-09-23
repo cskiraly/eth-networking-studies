@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "To cite a study, use the citation at the end of its section in README.md; this file describes the repository that pins the code."
+title: "eth-networking-studies"
+abstract: "The code behind each of the author's published Ethereum networking studies: one tag of submodule pins per publication."
+authors:
+  - family-names: Kiraly
+    given-names: Csaba
+repository-code: "https://github.com/cskiraly/eth-networking-studies"
+url: "https://github.com/cskiraly/eth-networking-studies"

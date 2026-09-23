@@ -1,0 +1,54 @@
+# eth-networking-studies
+
+One commit of this repository pins every piece of code behind one published networking
+study: the client branch the measurements ran on, the library forks it built against, and
+the measurement instruments. Each publication is a tag. Check out a tag, run
+`git submodule update --init`, and every directory is at the commit the study used.
+
+The four oldest tags were made in September 2026 from the posts' dates: those posts linked
+repositories, not commits, so each directory is at the last commit on the linked branch before
+the post went up, and each section says where that leaves a gap.
+
+To cite a study, cite its publication and name this repository's tag for the code; each section
+ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the repository itself.
+
+| tag | publication |
+| --- | --- |
+| `fulldas` | [FullDAS: towards massive scalability with 32MB blocks and beyond](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529), 2024-05-11 |
+
+## `fulldas`
+
+[FullDAS: towards massive scalability with 32MB blocks and beyond](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529)
+linked two simulators and no commits. Each directory is at the last commit on the linked
+branch before the post went up on 2024-05-11.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `das-research/` | [logos-storage/das-research](https://github.com/logos-storage/das-research) (linked as `codex-storage/das-research`, since renamed), branch `master` | `c53043bab` | the Python DAS simulator: the abstract, large-scale model of a 2D erasure-coded block spreading over row and column subnets, with custody, sampling and the parameter sweeps that produce the summary figures. `master` has not moved since 2024-03-29; the repository's `develop` branch stood at `04004ed`, 64 commits ahead, on the same day |
+| `das-simulator-nim/` | [cskiraly/das-simulator-nim](https://github.com/cskiraly/das-simulator-nim), branch `main` | `0e2810a11` | the Nim DAS simulator: a nim-libp2p test node with row and column topics, cross-forwarding, simulated erasure coding and reconstruction, run under Shadow. It vendors the author's nim-libp2p fork as its own submodule (`shadow/vendor/nim-libp2p` at `ee5eda960`, the partial-publish work) |
+
+Neither simulator has a build script here. `das-research/README.md` describes the Python
+environment and the study files, `das-simulator-nim/README.md` the Shadow build; the vendored
+fork needs a recursive submodule update.
+
+```sh
+git checkout fulldas && git submodule update --init --recursive
+cat das-research/README.md das-simulator-nim/README.md
+```
+
+**Cite as.** Csaba Kiraly, "FullDAS: towards massive scalability with 32MB blocks and beyond", ethresear.ch, 11 May 2024, <https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529>. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `fulldas`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2024fulldas,
+  author       = {Kiraly, Csaba},
+  title        = {{FullDAS}: towards massive scalability with 32{MB} blocks and beyond},
+  howpublished = {ethresear.ch},
+  year         = {2024},
+  month        = may,
+  url          = {https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag fulldas}
+}
+```
+</details>
