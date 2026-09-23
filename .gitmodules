@@ -1,6 +1,3 @@
-[submodule "das-research"]
-	path = das-research
-	url = https://github.com/logos-storage/das-research
 [submodule "das-simulator-nim"]
 	path = das-simulator-nim
 	url = https://github.com/cskiraly/das-simulator-nim

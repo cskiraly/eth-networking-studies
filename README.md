@@ -17,6 +17,44 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | `fulldas` | [FullDAS: towards massive scalability with 32MB blocks and beyond](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529), 2024-05-11 |
 | `discv5-crawler` | [Crawling the Ethereum discv5 network, fast](https://ethresear.ch/t/crawling-the-ethereum-discv5-network-fast/20962), 2024-11-12 |
 | `batch-publishing` | [Improving DAS performance with GossipSub Batch Publishing](https://ethresear.ch/t/improving-das-performance-with-gossipsub-batch-publishing/21713), 2025-02-10 |
+| `pppt` | [PPPT: Fighting the GossipSub Overhead with Push-Pull Phase Transition](https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118), 2025-04-09 |
+
+## `pppt`
+
+[PPPT: Fighting the GossipSub Overhead with Push-Pull Phase Transition](https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118)
+linked the Nim DAS simulator only, whose `main` had not moved since `batch-publishing`. The
+push-pull strategies themselves are on the `gossipsub-push-pull` branch of the nim-libp2p fork,
+which the post did not link; its commit with the PPPT strategies was pushed on 2025-04-15, six
+days after the post went up on 2025-04-09, and is pinned here as the closest public code.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `das-simulator-nim/` | [cskiraly/das-simulator-nim](https://github.com/cskiraly/das-simulator-nim), branch `main` | `4ba1a698e` | the Nim DAS simulator, unchanged since `batch-publishing` |
+| `nim-libp2p/` | [cskiraly/nim-libp2p](https://github.com/cskiraly/nim-libp2p), branch `gossipsub-push-pull` | `073bc48cf` | the push-pull strategies including PPPT (`073bc48cf`), IDONTWANT disabled for the experiments (`60185c6a3`), the hop count in the message and the pending-IWANT tracking they build on (`86624760a` to `7b3a5ec46`) |
+
+Build as in `fulldas`, with the simulator's vendored copy pointed at `nim-libp2p/`.
+
+```sh
+git checkout pppt && git submodule update --init --recursive
+git -C nim-libp2p log --oneline 507242370..HEAD
+```
+
+**Cite as.** Csaba Kiraly, "PPPT: Fighting the GossipSub Overhead with Push-Pull Phase Transition", ethresear.ch, 9 April 2025, <https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118>. Code: <https://github.com/cskiraly/eth-networking-studies>, tag `pppt`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2025pppt,
+  author       = {Kiraly, Csaba},
+  title        = {{PPPT}: fighting the {GossipSub} overhead with push-pull phase transition},
+  howpublished = {ethresear.ch},
+  year         = {2025},
+  month        = apr,
+  url          = {https://ethresear.ch/t/pppt-fighting-the-gossipsub-overhead-with-push-pull-phase-transition/22118},
+  note         = {Code: \url{https://github.com/cskiraly/eth-networking-studies}, tag pppt}
+}
+```
+</details>
 
 ## `batch-publishing`
 
