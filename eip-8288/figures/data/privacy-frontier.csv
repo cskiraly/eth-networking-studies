@@ -1,0 +1,13 @@
+design,anchor_ms,factor,capacity,bound
+eip_tick,303,1,7.5,1
+eip_tick,303,2,4.5,1
+eip_tick,606,1,1.5,1
+eip_tick,606,2,0.0,1
+eip_tick,1212,1,0.0,1
+eip_tick,1212,2,0.0,1
+tickless,303,1,15.0,0
+tickless,303,2,9.0,1
+tickless,606,1,3.0,1
+tickless,606,2,1.5,1
+tickless,1212,1,0.0,1
+tickless,1212,2,0.0,1

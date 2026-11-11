@@ -1,0 +1,65 @@
+cell	seed	command
+t16-r2-leaf-k16	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 16
+t16-r2-rec-n2-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t16-r2-rec-n4-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t16-r2-rec-n8-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t16-r2-leaf-k512	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 512
+t16-r2-rec-n2-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t16-r2-rec-n4-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t16-r2-rec-n8-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t8-r2-leaf-k16	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 16
+t8-r2-rec-n2-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t8-r2-rec-n4-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t8-r2-rec-n8-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t8-r2-leaf-k512	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 512
+t8-r2-rec-n2-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t8-r2-rec-n4-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t8-r2-rec-n8-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t4-r2-leaf-k16	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 16
+t4-r2-rec-n2-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t4-r2-rec-n4-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t4-r2-rec-n8-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t4-r2-leaf-k512	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 512
+t4-r2-rec-n2-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t4-r2-rec-n4-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t4-r2-rec-n8-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t2-r2-leaf-k16	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 16
+t2-r2-rec-n2-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t2-r2-rec-n4-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t2-r2-rec-n8-k16	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t2-r2-leaf-k512	-	leanvm --log-inv-rate 2 --repeat 3 aggregate --sphincs 512
+t2-r2-rec-n2-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t2-r2-rec-n4-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t2-r2-rec-n8-k512	-	leanvm --log-inv-rate 2 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t16-r1-leaf-k16	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 16
+t16-r1-rec-n2-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t16-r1-rec-n4-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t16-r1-rec-n8-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t16-r1-leaf-k512	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 512
+t16-r1-rec-n2-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t16-r1-rec-n4-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t16-r1-rec-n8-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t8-r1-leaf-k16	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 16
+t8-r1-rec-n2-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t8-r1-rec-n4-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t8-r1-rec-n8-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t8-r1-leaf-k512	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 512
+t8-r1-rec-n2-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t8-r1-rec-n4-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t8-r1-rec-n8-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t4-r1-leaf-k16	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 16
+t4-r1-rec-n2-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t4-r1-rec-n4-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t4-r1-rec-n8-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t4-r1-leaf-k512	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 512
+t4-r1-rec-n2-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t4-r1-rec-n4-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t4-r1-rec-n8-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t2-r1-leaf-k16	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 16
+t2-r1-rec-n2-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t2-r1-rec-n4-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t2-r1-rec-n8-k16	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 16
+t2-r1-leaf-k512	-	leanvm --log-inv-rate 1 --repeat 3 aggregate --sphincs 512
+t2-r1-rec-n2-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 2 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t2-r1-rec-n4-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 4 --xmss-per-leaf 0 --sphincs-per-leaf 512
+t2-r1-rec-n8-k512	-	leanvm --log-inv-rate 1 --repeat 3 recursion --n 8 --xmss-per-leaf 0 --sphincs-per-leaf 512

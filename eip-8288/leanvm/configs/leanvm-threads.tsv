@@ -1,0 +1,5 @@
+cell	seed	command
+t16-r2-anchor-n2-x900	-	LEANVM_NUM_THREADS=16 leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 900
+t8-r2-anchor-n2-x900	-	LEANVM_NUM_THREADS=8 leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 900
+t4-r2-anchor-n2-x900	-	LEANVM_NUM_THREADS=4 leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 900
+t2-r2-anchor-n2-x900	-	LEANVM_NUM_THREADS=2 leanvm --log-inv-rate 2 --repeat 3 recursion --n 2 --xmss-per-leaf 900

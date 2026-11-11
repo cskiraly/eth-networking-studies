@@ -1,9 +1,6 @@
-[submodule "prysm"]
-	path = prysm
-	url = https://github.com/cskiraly/prysm
-[submodule "eth-networking-lab"]
-	path = eth-networking-lab
-	url = https://github.com/cskiraly/eth-networking-lab
-[submodule "shadow"]
-	path = shadow
-	url = https://github.com/shadow/shadow
+[submodule "stark-mempool-sim"]
+	path = stark-mempool-sim
+	url = https://github.com/cskiraly/stark-mempool-sim
+[submodule "leanVM"]
+	path = leanVM
+	url = https://github.com/leanEthereum/leanVM

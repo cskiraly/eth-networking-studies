@@ -1,0 +1,15 @@
+fitted: a proof 25.88 ms, a nested proof 108.16 ms, a signature 1.667 ms
+priced: a proof 25.9 ms, a nested proof 108.2 ms, a signature 1.667 ms, at least 303 ms from two nested proofs
+
+shape            measured ms priced ms   error
+anchor-n2-x900         303.0     303.0   +0.0%
+leaf-k16                52.6      52.6   +0.0%
+leaf-k512              879.6     879.4   -0.0%
+rec-n2-k16             210.0     303.0  +44.3%
+rec-n4-k16             386.4     458.7  +18.7%
+rec-n8-k16             782.1     891.5  +14.0%
+rec-n16-k16           1539.9    1757.1  +14.1%
+rec-n2-k512            299.9     303.0   +1.0%
+rec-n4-k512            448.7     458.7   +2.2%
+rec-n8-k512            881.5     891.5   +1.1%
+rec-n16-k512          1763.7    1757.1   -0.4%

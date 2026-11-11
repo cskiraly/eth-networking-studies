@@ -1,0 +1,5 @@
+name,threads,rate,kind,n,k,try,accepted,foreign_before,foreign_during,wall_s,own_cpu_s,maxrss_gib,cycles,committed_log2,prove_s,prove_pm,peak_gib,proof_kib,verify_ms
+t16-r2-anchor-n2-x900,16,2,anchor,2,900,1,1,1.4,1.55,169.5,1984.8,8.74,542319,24.02,0.566,5.0,8.743,217.4,12.848
+t8-r2-anchor-n2-x900,8,2,anchor,2,900,1,1,1.52,1.94,15.5,54.4,8.72,542319,24.02,0.588,18.1,8.725,217.4,12.421
+t4-r2-anchor-n2-x900,4,2,anchor,2,900,1,1,1.63,1.53,19.3,44.3,8.69,542319,24.02,0.816,5.0,8.69,217.4,11.561
+t2-r2-anchor-n2-x900,2,2,anchor,2,900,1,1,1.46,1.32,28.4,41.8,8.7,542319,24.02,1.418,3.8,8.696,217.4,13.485

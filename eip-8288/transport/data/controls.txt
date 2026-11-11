@@ -1,0 +1,35 @@
+Design 2 at 25%, request timeout 500 ms -> 5 s, seed 100: inclusion up the ladder; GB refused at c+
+  2 pull      quarter  n100   6   obj   p18  98.2%->100.0%  p27  83.7%-> 95.6%  p36  74.1%-> 49.5%  p54  37.1%-> 32.9%  p72      --> 28.1%    100 ->  36
+  2 pull      quarter  n100   501 obj   p18  96.3%->100.0%  p27  73.3%-> 98.3%  p36  48.2%-> 82.1%  p54  75.9%-> 56.0%  p72      --> 40.2%     98 ->  32
+  2 pull      quarter  n1000  6   obj   p12  98.8%-> 99.9%  p18  88.1%-> 99.9%  p27  72.1%-> 99.6%  p36  51.1%-> 95.4%  p54  55.1%-> 57.8%  p72      --> 25.0%  p96      --> 20.3%    491 -> 106
+  2 pull      quarter  n1000  501 obj   p12  99.4%->100.0%  p18  92.7%->100.0%  p27  80.3%-> 99.3%  p36  63.1%-> 95.7%  p54  47.6%-> 73.7%  p72      --> 45.7%  p96      --> 33.1%    489 ->  96
+
+Geth at 25%, six-object block, request timeout 5 s -> 500 ms, seed 100: inclusion
+  5 geth      quarter  n100   6   obj   p12 100.0%->100.0%  p18 100.0%->100.0%  p27  99.9%-> 99.9%  p36  97.7%-> 97.6%  p54  93.1%-> 93.3%
+  5 geth      quarter  n1000  6   obj   p12 100.0%->100.0%  p18 100.0%->100.0%  p27 100.0%->100.0%  p36 100.0%->100.0%  p54 100.0%->100.0%
+
+Design 2 with one builder (at c and c+) and every node (at 72 and 96), request timeout 500 ms -> 5 s, seed 100: inclusion
+  2 pull      builder  n100   6   obj   p9   97.0%->100.0%  p12  84.8%-> 59.8%
+  2 pull      builder  n100   501 obj   p12  96.8%-> 99.9%  p18  80.3%-> 99.6%
+  2 pull      every    n100   6   obj   p72 100.0%-> 74.7%  p96 100.0%-> 52.3%
+  2 pull      builder  n1000  6   obj   p9   97.5%->100.0%  p12  84.2%-> 57.3%
+  2 pull      builder  n1000  501 obj   p9   98.1%->100.0%  p12  92.2%->100.0%
+  2 pull      every    n1000  6   obj   p72 100.0%->100.0%  p96 100.0%->100.0%
+
+Design 4 at 25%, request timeout 500 ms -> 5 s at c and c+, seed 100: inclusion
+  4 coverage  quarter  n100   6   obj   p36  98.5%-> 71.9%  p54  84.1%-> 50.7%
+  4 coverage  quarter  n100   501 obj   p36  98.9%-> 91.4%  p54  89.9%-> 70.0%
+  4 coverage  quarter  n1000  6   obj   p36  97.9%-> 98.2%  p54  92.3%-> 81.2%
+  4 coverage  quarter  n1000  501 obj   p54  95.2%-> 87.2%  p72  89.3%-> 74.0%
+
+Design 4, six-object block, a fold's inputs in the EIP's order -> ranked by fee per proving cost: inclusion (at 25%: 54 at each seed and 72 at seed 100; with one builder: c and c+ at seed 100)
+  4 coverage  quarter  n100   6   obj   p54 s100 84.1%-> 89.0%  p54 s101 76.7%-> 84.4%  p54 s102 28.4%-> 32.5%  p54 s103 73.3%-> 90.7%  p72 s100     --> 76.5%
+  4 coverage  builder  n100   6   obj   p9   96.9%-> 96.2%  p12  77.0%-> 77.5%
+  4 coverage  quarter  n1000  6   obj   p54 s100 92.3%-> 98.6%  p54 s101 94.9%-> 99.2%  p54 s102 94.0%-> 98.8%  p54 s103 95.5%-> 99.1%  p72 s100     --> 95.6%
+  4 coverage  builder  n1000  6   obj   p6  100.0%->100.0%  p9   87.3%-> 87.4%
+
+One builder under pull, proving 1,000 times faster, seed 100: inclusion at c, c+ and the step above
+  2 pull      builder  n100   6   obj p9    97.0% ->  99.9%   p12   84.8% ->  99.0%   p18   69.7% ->  84.5%
+  2 pull      builder  n100   501 obj p12   96.8% ->  99.1%   p18   80.3% ->  85.8%   p27   60.1% ->  69.1%
+  2 pull      builder  n1000  6   obj p9    97.5% ->  99.9%   p12   84.2% ->  94.2%   p18   64.6% ->  81.3%
+  2 pull      builder  n1000  501 obj p9    98.1% -> 100.0%   p12   92.2% ->  95.6%   p18   76.5% ->  81.0%

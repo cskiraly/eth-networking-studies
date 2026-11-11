@@ -22,6 +22,39 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | `segmentation-part2` | [Wen fast payload broadcast? Segment, code, push, pull, and everything in between](https://ethresear.ch/t/wen-fast-payload-broadcast-segment-code-push-pull-and-everything-in-between/25913) and [EIP-8411: what segmented payload diffusion is made of](https://ethresear.ch/t/eip-8411-what-segmented-payload-diffusion-is-made-of/26025), 2026-09-17 |
 | `shadow-crosscheck` | [EIP-8411 payload segmentation under the Shadow simulator](https://ethresear.ch/t/eip-8411-payload-segmentation-under-the-shadow-simulator/26070) and its technical report [EIP-8411 payload segmentation under Shadow: a cross-check of the simulations](https://notes.ethereum.org/@cskiraly/EIP-8411-shadow-cross-check), 2026-09-23 |
 | `seacast-u1` | [SEACAST: fast, lean broadcast for Ethereum, with an executable spec and a formal model](https://ethresear.ch/t/seacast-fast-lean-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167), version 1 of its living text, [`seacast/`](seacast/), and its record, 2026-10-29 |
+| `eip-8288-networking` | *EIP-8288: the networking side of recursive aggregation*, on ethresear.ch, and its reader page, [EIP-8288 First Questions](https://claude.ai/artifact/18s7FFBBddd3YMFz2kcQHv), version 11, and their record, [`eip-8288/`](eip-8288/), 2026-11-11 |
+
+## `eip-8288-networking`
+
+The code behind *EIP-8288: the networking side of recursive aggregation* and version 11 of its
+reader page, *EIP-8288 First Questions*: a simulator of EIP-8288's mempool aggregation, and the
+leanVM whose proving times price it. Their record, [`eip-8288/`](eip-8288/), holds the
+configuration of every run, the data behind each figure and table, the scripts that read the runs
+into them (each rerun to its file byte for byte), and a replay of 25 cells at the pinned code.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `stark-mempool-sim/` | [cskiraly/stark-mempool-sim](https://github.com/cskiraly/stark-mempool-sim), tag `first-questions-v11`, branch `netsim/v2` | `d6b1dd919d` | version 2.5 of a discrete-event simulation of EIP-8288 in Python, a fork of [asn-d6/stark-mempool-sim](https://github.com/asn-d6/stark-mempool-sim); every run is one `bench.mainnet` command from its root |
+| `leanVM/` | [leanEthereum/leanVM](https://github.com/leanEthereum/leanVM) | `990b935263` | the leanVM whose folds were timed for calibration v2's prices, and for version 11's figures cpu-model and cores |
+
+How to rerun a cell is in [`eip-8288/README.md`](eip-8288/README.md); each part's README says how its
+scripts read the runs.
+
+**Cite as.** Csaba Kiraly, "EIP-8288: the networking side of recursive aggregation", ethresear.ch, November 2026. Data and code: <https://github.com/cskiraly/eth-networking-studies>, tag `eip-8288-networking`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2026eip8288networking,
+  author       = {Kiraly, Csaba},
+  title        = {{EIP-8288}: the networking side of recursive aggregation},
+  howpublished = {ethresear.ch},
+  year         = {2026},
+  month        = nov,
+  note         = {Data and code: \url{https://github.com/cskiraly/eth-networking-studies}, tag eip-8288-networking}
+}
+```
+</details>
 
 ## `seacast-u1`
 
