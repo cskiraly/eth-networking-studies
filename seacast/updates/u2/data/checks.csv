@@ -1,0 +1,7 @@
+machine,network,protocol,size_kib,seed,gap_ms,disc,shape,passed,msgs,p99_s,mib,p99_max_warm_s,compressed_b,log
+A,dcb20,ecbroadcast-rs,1024,7,,,,True,6,0.6140,3.0336,0.6750,745200,ecrs_cmp_d16_dcb20_seed7.log
+A,dcb20,gossipsub,1024,7,,,,True,6,1.6020,3.7922,1.9300,,wholend_re4fd_m6_dcb20_brd16_s0a_q0_seed7.log
+A,all-home,gossipsub,4096,7,,,,True,6,21.0480,28.3006,21.3310,,wholend_re4fd_m6_brd16_p4096k_s0a_q0_seed7.log
+A,dcb20,seacast,1024,7,,,,True,6,0.4790,1.6980,0.5040,,aadaptcf_both_cancel_rare_rt4b_hc_pr2_hp2_sc_selfewest_hoseonstfs_pggroup_pace16_m6_dcb20_v05p4r_brd16_s0a_q0_seed7.log
+C,dcb20,gossipsub,1024,7,,,,True,6,1.6240,3.7780,2.0090,,wholend_re4fd_m6_dcb20_brd16_s0a_q0_seed7.log
+C,dcb20,gossipsub,2048,7,40000,,,True,6,2.8510,8.4542,2.8910,,wholend_re4fd_m6g40000_dcb20_brd16_p2048k_s0a_q0_seed7.log
