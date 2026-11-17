@@ -2,7 +2,7 @@
 
 The record behind version 1 of [SEACAST's living text](../../README.md), measured 2026-10-22 to 2026-10-25 and recorded
 2026-10-26. The text carries on
-[*SEACAST: fast, lean broadcast for Ethereum, with an executable spec and a formal model*](https://ethresear.ch/t/seacast-fast-lean-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167)
+[*SEACAST: fast, lean, sampled broadcast for Ethereum, with an executable spec and a formal model*](https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167)
 (2026). SEACAST's specification and releases: [informed-diffusion-spec](https://github.com/cskiraly/informed-diffusion-spec).
 
 Every result here is the median over ten simulated networks of each kind, 500 nodes with 16 connections each (FullDAS
@@ -147,8 +147,8 @@ revision every Shadow build of this record was built with, and one every snapsho
 The specification these measurements compare with is version 0.5 of its text (its release v0.6.1, whose §9 says where
 the rerun's implementation does as the text does); later releases change the text, not these measurements.
 
-**Cite as.** Csaba Kiraly, "SEACAST: fast, lean broadcast for Ethereum, with an executable spec and a formal model",
-ethresear.ch, 21 October 2026, <https://ethresear.ch/t/seacast-fast-lean-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167>,
+**Cite as.** Csaba Kiraly, "SEACAST: fast, lean, sampled broadcast for Ethereum, with an executable spec and a formal model",
+ethresear.ch, 21 October 2026, <https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167>,
 update 1. Data and code: <https://github.com/cskiraly/eth-networking-studies>, tag `seacast-u1`.
 
 <details><summary>BibTeX</summary>
@@ -156,11 +156,11 @@ update 1. Data and code: <https://github.com/cskiraly/eth-networking-studies>, t
 ```bibtex
 @misc{kiraly2026seacastu1,
   author       = {Kiraly, Csaba},
-  title        = {{SEACAST}: fast, lean broadcast for {Ethereum}, with an executable spec and a formal model},
+  title        = {{SEACAST}: fast, lean, sampled broadcast for {Ethereum}, with an executable spec and a formal model},
   howpublished = {ethresear.ch},
   year         = {2026},
   month        = oct,
-  url          = {https://ethresear.ch/t/seacast-fast-lean-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167},
+  url          = {https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167},
   note         = {Update 1. Data and code: \url{https://github.com/cskiraly/eth-networking-studies}, tag seacast-u1}
 }
 ```

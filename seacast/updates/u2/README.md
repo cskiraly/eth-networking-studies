@@ -1,7 +1,7 @@
 # SEACAST update 2: payload size, the specification's versions 0.9 to 0.10.2, and an account of the proofs
 
 The record behind version 2 of [SEACAST's living text](../../README.md), measured 2026-11-16. The text carries on
-[*SEACAST: fast, lean broadcast for Ethereum, with an executable spec and a formal model*](https://ethresear.ch/t/seacast-fast-lean-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167)
+[*SEACAST: fast, lean, sampled broadcast for Ethereum, with an executable spec and a formal model*](https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167)
 (2026). SEACAST's specification and releases: [informed-diffusion-spec](https://github.com/cskiraly/informed-diffusion-spec);
 version 2 of the text describes its release [v0.10.2](https://github.com/cskiraly/informed-diffusion-spec/tree/v0.10.2).
 
