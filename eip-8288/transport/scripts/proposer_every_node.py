@@ -17,7 +17,7 @@ from runs import DESIGNS, Runs, arguments, write_used
 
 NAMES = {"push": "1 push", "pull": "2 pull", "keep": "3 keep", "coverage": "4 coverage",
          "geth": "5 geth"}
-SEEDS = (100, 101, 102, 103)
+SEEDS = (100, 101, 102, 103, 104, 105, 106, 107)
 EXTENDED = (0, 3, 6, 9, 12, 18, 27, 36, 54, 72, 96)
 args = arguments(__doc__.splitlines()[0])
 runs = Runs(args.runs)

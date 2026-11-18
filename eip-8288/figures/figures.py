@@ -148,14 +148,14 @@ def extract_latency(dirs_303):
 
 
 # The transport readers' capacity table: per design, privacy tx/s held on top of 15 tx/s of
-# signatures, seeds 100-103, with a random proposer each slot wherever one was run. One
+# signatures, seeds 100-107, with a random proposer each slot wherever one was run. One
 # builder's columns have the builder propose, as it does by construction.
 TRANSPORT_COLUMNS = [("every", 100), ("every", 1000), ("builder", 100), ("builder", 1000),
                      ("quarter", 100), ("quarter", 1000)]
 
 
 def _transport_tables(path):
-    """{(block, design, participation, nodes): [(value, at_top) for seeds 100-103]}."""
+    """{(block, design, participation, nodes): [(value, at_top) for seeds 100-107]}."""
     cells, block = {}, None
     for line in open(path):
         if line.startswith("### ") and not line.startswith("### Capacity"):
@@ -169,8 +169,8 @@ def _transport_tables(path):
             design = int(fields[0].split()[0])
             for (participation, nodes), field in zip(TRANSPORT_COLUMNS, fields[1:]):
                 values = [v.strip() for v in field.split("/")]
-                values = values * 4 if len(values) == 1 else values
-                assert len(values) == 4, (path, line)
+                values = values * 8 if len(values) == 1 else values
+                assert len(values) == 8, (path, line)
                 cells[(block, design, participation, nodes)] = [
                     (int(v.lstrip("≥")), v.startswith("≥")) for v in values]
     return cells
@@ -181,7 +181,7 @@ def extract_designs(table):
     cells = _transport_tables(table)
     rows = []
     for (block, design, participation, nodes), seeds in sorted(cells.items()):
-        for seed, (value, at_top) in zip(range(100, 104), seeds):
+        for seed, (value, at_top) in zip(range(100, 108), seeds):
             rows.append(dict(block=block, design=design, participation=participation,
                              nodes=nodes, seed=seed, capacity=value, at_top=int(at_top)))
     write("designs.csv", rows)
@@ -587,7 +587,7 @@ def draw_w():
     cw, ch, gap, x0, pgap = 44, 34, 2, 128, 26
     pw = len(rates) * (cw + gap) - gap
     w = x0 + 3 * pw + 2 * pgap + 20
-    body = [text(20, 28, "Which designs keep up, at 1,000 nodes", "title"),
+    body = [text(20, 28, "Which fold timings keep up, at 1,000 nodes", "title"),
             text(20, 48, "Share included on the worst of 8 seeds (%, rounded down). Raw "
                  "transactions pushed to every node; a privacy witness costs one nested proof.",
                  "sub"),
@@ -612,10 +612,13 @@ def draw_w():
                                 f'class="{r["cls"]}"><title>{esc(label)}, {anchor} ms fold, '
                                 f'{tps} tx/s, {share_label}: {r["cls"]}, worst seed {worst:.1f}% '
                                 f'included, CPU {float(r["cpu"]):.0%}</title></rect>')
-                    body.append(text(cx + cw / 2, cy + ch / 2 + 4, f"{math.floor(worst):.0f}",
+                    # round first: 100 * 0.57 is 56.99... in floating point
+                    body.append(text(cx + cw / 2, cy + ch / 2 + 4,
+                                     f"{math.floor(round(worst, 6)):.0f}",
                                      f"val t-{r['cls']}", "middle"))
-            body.append(f'<rect x="{px - 3}" y="{top - 3}" width="{2 * (cw + gap) + 4}" '
-                        f'height="{ch + 6}" rx="6" class="today"/>')
+            # today's load, about 21 tx/s, lies between the 20 and 30 tx/s columns
+            body.append(f'<rect x="{px + cw + gap - 3}" y="{top - 3}" '
+                        f'width="{2 * (cw + gap) + 4}" height="{ch + 6}" rx="6" class="today"/>')
         for k, (_, share_label) in enumerate(shares):
             body.append(text(x0 - 12, top + k * (ch + gap) + ch / 2 + 4, share_label, "lab",
                              "end"))
@@ -629,8 +632,8 @@ def draw_w():
         body.append(text(lx + 20, ly, label))
         lx += 34 + 7 * len(label)
     body.append(f'<rect x="{lx}" y="{ly - 11}" width="24" height="14" rx="4" class="today"/>')
-    body.append(text(lx + 30, ly, "today's mainnet: about 15–20 tx/s, none private"))
-    svg("holds-grid.svg", w, ly + 20, "Which designs keep up, at 1,000 nodes",
+    body.append(text(lx + 30, ly, "today's mainnet: about 20–25 tx/s, none private"))
+    svg("holds-grid.svg", w, ly + 20, "Which fold timings keep up, at 1,000 nodes",
         "Six grids of privacy share by transaction rate: one column per fold timing, one row per "
         "prover, calibration v2 prices. On the fast prover every cell holds. On four Ryzen "
         "cores every fold timing holds every rate without privacy. With privacy the EIP's "
@@ -1127,7 +1130,7 @@ def draw_capacity_relay():
 
 
 def draw_designs():
-    """Capacity by design, under the three ways to share the work, six-object blocks. Seeds 101-103
+    """Capacity by design, under the three ways to share the work, six-object blocks. Seeds 101-107
     ran to 72 and seed 100 to 96, so a capacity is shown up to 72, with an arrow where a seed held
     the top of its ladder."""
     rows = [r for r in read("designs.csv") if r["block"] == "6"]
@@ -1135,7 +1138,7 @@ def draw_designs():
     for r in rows:
         cells.setdefault((int(r["design"]), r["participation"], int(r["nodes"])), []).append(
             (min(int(r["capacity"]), 72), r["at_top"] == "1" or int(r["capacity"]) >= 72))
-    designs = ["1, push", "2, pull", "3, keep", "4, coverage", "5, geth today"]
+    designs = ["1, push", "2, pull", "3, keep", "4, coverage", "5, geth's rules"]
     panels = [("every", "Every node aggregates"), ("quarter", "A quarter aggregate"),
               ("builder", "One builder proves everything")]
     sizes = [(100, "s2", -7, "100 nodes"), (1000, "s1", 7, "1,000 nodes")]
@@ -1143,7 +1146,7 @@ def draw_designs():
     w = x0 + 3 * pw + 2 * pgap + 20
     body = [text(20, 28, "How raw transactions travel decides capacity once only some nodes "
                  "aggregate", "title"),
-            text(20, 48, "Privacy tx/s held on top of 15 signature tx/s, range over 4 seeds; the "
+            text(20, 48, "Privacy tx/s held on top of 15 signature tx/s, range over 8 seeds; the "
                  "EIP's 1,000 ms tick, the fast prover, six-object blocks.", "sub"),
             text(20, 64, "A node drawn at random proposes each slot; one builder proposes every "
                  "block.", "sub")]
@@ -1189,8 +1192,8 @@ def draw_designs():
         "How raw transactions travel decides capacity once only some nodes aggregate",
         "Privacy capacity of the five transport designs at 100 and 1,000 nodes, under three ways "
         "to share the work. With every node aggregating, every design holds at least 72 privacy "
-        "tx/s at 1,000 nodes, and push 54 at 100. With a quarter of the nodes aggregating, at "
-        "1,000 nodes, push holds 6, pull 18, keep and coverage 36-54, and geth's relay at least "
+        "tx/s at 1,000 nodes, and push 36-54 at 100. With a quarter of the nodes aggregating, at "
+        "1,000 nodes, push holds 6, pull 12-18, keep and coverage 36-54, and geth's rules at least "
         "72. One builder holds 6-9 in every design but push, which holds 3-6.",
         body)
 

@@ -18,7 +18,7 @@
 | `design2-pull-25pct` | design 2, pull, 25% aggregators, random proposer (designs) | `designs-random-proposer`: `pull-quarter-n100-p18-6obj-random-s100` | identical | 93119 | 0 | 1967/1980 / 1967/1980 |
 | `design3-keep-25pct` | design 3, keep, 25% aggregators, random proposer (designs) | `designs-random-proposer`: `keep-quarter-n100-p36-6obj-random-s100` | identical | 101492 | 0 | 2950/3060 / 2950/3060 |
 | `design4-coverage-25pct` | design 4, coverage, 25% aggregators, random proposer (designs) | `designs-random-proposer`: `coverage-quarter-n100-p36-6obj-random-s100` | identical | 103105 | 0 | 3016/3060 / 3016/3060 |
-| `design5-geth-25pct` | design 5, geth today, 25% aggregators, random proposer (designs) | `designs-random-proposer`: `geth-quarter-n100-p36-6obj-random-s100` | identical | 101173 | 0 | 3017/3060 / 3017/3060 |
+| `design5-geth-25pct` | design 5, geth's rules, 25% aggregators, random proposer (designs) | `designs-random-proposer`: `geth-quarter-n100-p36-6obj-random-s100` | identical | 101173 | 0 | 3017/3060 / 3017/3060 |
 | `design2-pull-one-builder` | design 2, pull, one builder | `designs-fixed-proposer`: `pull-builder-n100-p9-6obj-fixed-s100` | identical | 88137 | 0 | 1397/1440 / 1397/1440 |
 | `one-builder-fast-prover` | one builder with a prover a thousand times faster | `capacity-one-builder-fast-prover`: `one-builder-fast-prover-n100-p6-seed100` | identical | 83591 | 12 | 1183/1260 / 1183/1260 |
 | `partial-25pct-all` | a relay as proposer, 25% aggregators, relays forwarding every proof | `partial-aggregation-follow-ups`: `partial-a0.25-all-relayprop-sig30-seed104` | identical | 736866 | 20 | 1792/1800 / 1792/1800 |

@@ -18,9 +18,9 @@ around each edge.
 from runs import Runs, arguments, write_used
 
 NAMES = {"push": "1 push", "pull": "2 pull", "keep": "3 keep", "coverage": "4 coverage",
-         "geth": "5 geth today"}
+         "geth": "5 geth's rules"}
 SETTINGS = {"every": "every node", "builder": "one builder", "quarter": "25% aggregators"}
-SEEDS = (100, 101, 102, 103)
+SEEDS = (100, 101, 102, 103, 104, 105, 106, 107)
 EXTENDED = (0, 3, 6, 9, 12, 18, 27, 36, 54, 72, 96)
 RANDOM = ("quarter", "every")
 args = arguments(__doc__.splitlines()[0])
@@ -52,8 +52,8 @@ def capacity_cell(d, s, n, b):
 
 
 out = ["### Capacity: privacy tx/s held on top of 15 signature tx/s, with a random proposer\n",
-       "At seeds 100 / 101 / 102 / 103, one value where all four agree. '≥': the highest rung run "
-       "held (seed 100 ran to 96, seeds 101–103 to 72). The every-node and 25% columns are a random "
+       "At seeds 100 to 107 in order, one value where all eight agree. '≥': the highest rung run "
+       "held (seed 100 ran to 96, seeds 101–107 to 72). The every-node and 25% columns are a random "
        "proposer's (proposer_mode=random); the one-builder columns are node 0's, as in "
        "designs-fixed-proposer.md: that builder proposes by construction.\n"]
 for b, title in ((6, "six-object block"), (501, "501-object block")):

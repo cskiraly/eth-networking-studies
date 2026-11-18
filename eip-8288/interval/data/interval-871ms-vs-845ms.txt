@@ -1,0 +1,6 @@
+A = 871ms, B = 845ms
+
+design     share tps f  n  A         A worst  B         B worst    cpu A>B egress A>B    delay A>B paired  peer leaf late24   KiB
+tick1000     0.2  10 1  8  marginal    0.618  marginal    0.553  0.89>0.94 0.91>0.87   22.3>23.5   +1.22  0.46 0.45   0.08 230.4
+tick1000     0.2  20 1  8  collapsed   0.338  collapsed   0.212  0.90>0.95 0.95>0.94   25.7>26.7   +0.96  0.40 0.56   0.00 230.8
+tick1000     0.2  45 1  8  collapsed   0.175  collapsed   0.109  0.91>0.97 0.97>0.97   27.6>32.2   +4.67  0.36 0.62   0.00 230.9

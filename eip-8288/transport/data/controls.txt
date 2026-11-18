@@ -23,9 +23,9 @@ Design 4 at 25%, request timeout 500 ms -> 5 s at c and c+, seed 100: inclusion
   4 coverage  quarter  n1000  501 obj   p54  95.2%-> 87.2%  p72  89.3%-> 74.0%
 
 Design 4, six-object block, a fold's inputs in the EIP's order -> ranked by fee per proving cost: inclusion (at 25%: 54 at each seed and 72 at seed 100; with one builder: c and c+ at seed 100)
-  4 coverage  quarter  n100   6   obj   p54 s100 84.1%-> 89.0%  p54 s101 76.7%-> 84.4%  p54 s102 28.4%-> 32.5%  p54 s103 73.3%-> 90.7%  p72 s100     --> 76.5%
+  4 coverage  quarter  n100   6   obj   p54 s100 84.1%-> 89.0%  p54 s101 76.7%-> 84.4%  p54 s102 28.4%-> 32.5%  p54 s103 73.3%-> 90.7%  p54 s104 80.9%-> 89.7%  p54 s105 77.6%-> 89.7%  p54 s106 83.7%-> 87.5%  p54 s107 56.8%-> 89.5%  p72 s100     --> 76.5%
   4 coverage  builder  n100   6   obj   p9   96.9%-> 96.2%  p12  77.0%-> 77.5%
-  4 coverage  quarter  n1000  6   obj   p54 s100 92.3%-> 98.6%  p54 s101 94.9%-> 99.2%  p54 s102 94.0%-> 98.8%  p54 s103 95.5%-> 99.1%  p72 s100     --> 95.6%
+  4 coverage  quarter  n1000  6   obj   p54 s100 92.3%-> 98.6%  p54 s101 94.9%-> 99.2%  p54 s102 94.0%-> 98.8%  p54 s103 95.5%-> 99.1%  p54 s104 91.6%-> 98.8%  p54 s105 88.1%-> 99.0%  p54 s106 94.1%-> 99.2%  p54 s107 93.5%-> 98.9%  p72 s100     --> 95.6%
   4 coverage  builder  n1000  6   obj   p6  100.0%->100.0%  p9   87.3%-> 87.4%
 
 One builder under pull, proving 1,000 times faster, seed 100: inclusion at c, c+ and the step above

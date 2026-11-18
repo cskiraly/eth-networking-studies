@@ -19,8 +19,9 @@ cohort included within 24 s, and the mean recursive proof in KiB.
 control: what binds the 1,000 ms tick at the 871 ms anchor. Arm A has no proving budget; arm B
 the 303 ms anchor with the budget that keeps 871 ms's fold widths; arm D ten times the uplink.
 Each arm beside the 871 ms runs, and arm B also beside the 303 ms runs with the whole budget, at
-a fifth private, 10, 20 and 45 tx/s, seeds 100-103: inclusion per seed, the class, and the means
-of CPU, egress, peer- and leaf-loop stops, root claim (fold width) and delay.
+a fifth private, 10, 20 and 45 tx/s, on every seed that all five sets have at all three rates:
+inclusion per seed, the class, and the means of CPU, egress, peer- and leaf-loop stops, root claim
+(fold width) and delay.
 
 Both write OUT.txt (the table) and OUT.csv (one row a cell).
 """
@@ -141,12 +142,14 @@ def control(out, dir_871, dir_303, dir_a, dir_b, dir_d):
                 if k[0] == "tick1000" and k[1] == "1" and k[3] == 0.2}
 
     sets = {"871": runs(dir_871), "303": runs(dir_303), "A": runs(dir_a), "B": runs(dir_b), "D": runs(dir_d)}
-    seeds = (100, 101, 102, 103)
+    seeds = sorted({s for (_, s) in sets["A"]})
+    seeds = [s for s in seeds if all((tps, s) in runs_ for runs_ in sets.values() for tps in (10, 20, 45))]
     rows, lines = [], []
     for arm, refs in (("B", ("871", "303")), ("D", ("871",)), ("A", ("871",))):
         lines.append(f"arm {arm} against {', '.join(refs)}")
-        lines.append(f"{'tps':>3} {'set':4} {'class':9} {'seed 100':>8} {'101':>6} {'102':>6} {'103':>6}  "
-                     f"{'cpu':>4} {'egress':>6} {'peer':>4} {'leaf':>4} {'width':>6} {'delay':>6}")
+        lines.append(f"{'tps':>3} {'set':4} {'class':9} "
+                     + " ".join([f"{'seed ' + str(seeds[0]):>8}"] + [f"{str(s):>6}" for s in seeds[1:]])
+                     + f"  {'cpu':>4} {'egress':>6} {'peer':>4} {'leaf':>4} {'width':>6} {'delay':>6}")
         for tps in (10, 20, 45):
             for name in (arm,) + refs:
                 pts = [sets[name][(tps, s)] for s in seeds]

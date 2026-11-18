@@ -18,7 +18,7 @@ in brackets, the change from node 0 in points. Below, the steps each proposer he
 from runs import Runs, arguments, write_used
 
 NAMES = {"pull": "2 pull", "geth": "5 geth"}
-SEEDS = (100, 101, 102, 103)
+SEEDS = (100, 101, 102, 103, 104, 105, 106, 107)
 EXTENDED = (0, 3, 6, 9, 12, 18, 27, 36, 54, 72, 96)
 PROPOSERS = ("fixed", "other", "random")
 args = arguments(__doc__.splitlines()[0])

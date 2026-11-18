@@ -2,7 +2,9 @@
 
 The post's figures are in `post/`, as uploaded: PNGs of these SVGs rasterized at twice their size
 with headless Chromium, on white. The exception is `aggregation.png`, a diagram drawn by hand
-(`post/aggregation.svg`). First Questions version 11 shows the SVGs themselves.
+(`post/aggregation.svg`). First Questions version 11 shows the SVGs themselves, as the record's first
+version drew them. Two have changed since: `designs` now spans seeds 100–107, and `holds-grid` has
+a new title and marks today's load between the 20 and 30 tx/s columns.
 
 `figures.py` makes them from the runs in two steps:
 - `python3 -I figures.py extract SERIES DIR...` reads the runs into `data/*.csv`;
@@ -13,7 +15,7 @@ came out byte for byte, and `draw` redraws every SVG byte for byte from them.
 
 | figure | data | series | shown in |
 | --- | --- | --- | --- |
-| `holds-grid` Which designs keep up, at 1,000 nodes | `interval.csv` | `interval-303ms`, `interval-871ms` | the post; version 11, section 1 |
+| `holds-grid` Which fold timings keep up, at 1,000 nodes | `interval.csv` | `interval-303ms`, `interval-871ms` | the post; version 11, section 1 |
 | `latency` How long a transaction waits for a block | `latency.csv` | `interval-303ms` | the post; section 7 |
 | `designs` How raw transactions travel decides capacity once only some nodes aggregate | `designs.csv` | transport's `designs-random-proposer.md` | the post; section 3 |
 | `partial-aggregation` What happens when fewer nodes aggregate | `partial-aggregation.csv` | `partial-aggregation` | the post; section 3 |

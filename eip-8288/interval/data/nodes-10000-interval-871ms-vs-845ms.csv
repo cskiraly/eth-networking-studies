@@ -1,0 +1,4 @@
+design,share,tps,factor,seeds,class_871ms,worst_871ms,class_845ms,worst_845ms,cpu_871ms,cpu_845ms,egress_871ms,egress_845ms,delay_871ms,delay_845ms,delay_paired_diff,peer_stops_845ms,leaf_stops_845ms,late24_845ms,proof_kib_845ms
+tick1000,0.2000,10,1,4,marginal,0.6300,marginal,0.4933,0.8891,0.9266,0.8949,0.8509,23.4502,25.1328,1.6826,0.5828,0.3126,0.0133,230.3302
+tick1000,0.2000,20,1,4,collapsed,0.3292,collapsed,0.2683,0.8949,0.9467,0.9396,0.9197,25.5408,26.6895,1.1487,0.5553,0.3869,0.0000,230.8073
+tick1000,0.2000,45,1,4,collapsed,0.2293,collapsed,0.1259,0.8997,0.9608,0.9614,0.9541,29.0454,31.5333,2.4879,0.5193,0.4570,0.0000,230.8204

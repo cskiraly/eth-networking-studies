@@ -7,7 +7,7 @@ usage: designs_fixed_proposer.py RUNS [--used FILE] > designs-fixed-proposer.md
 RUNS is one flat directory of <cell>.jsonl files (configs/*.tsv name the cells). A run counts when
 its <cell>.jsonl exists: the runner writes it only once the run has finished.
 
-Capacity is each seed's: seed 100 ran the whole ladder (72 and 96 where 54 held); seeds 101-103
+Capacity is each seed's: seed 100 ran the whole ladder (72 and 96 where 54 held); seeds 101-107
 ran p = 0 and the steps around each edge. Upload is per node over the 84 s run (five slots of
 load and two to drain); delay is the mean in 12 s slots.
 """
@@ -16,9 +16,9 @@ import statistics
 from runs import Runs, arguments, write_used
 
 NAMES = {"push": "1 push", "pull": "2 pull", "keep": "3 keep", "coverage": "4 coverage",
-         "geth": "5 geth today"}
+         "geth": "5 geth's rules"}
 SETTINGS = {"every": "every node", "builder": "one builder", "quarter": "25% aggregators"}
-SEEDS = (100, 101, 102, 103)
+SEEDS = (100, 101, 102, 103, 104, 105, 106, 107)
 EXTENDED = (0, 3, 6, 9, 12, 18, 27, 36, 54, 72, 96)
 args = arguments(__doc__.splitlines()[0])
 runs = Runs(args.runs)
@@ -43,7 +43,7 @@ def delay(*k):
 
 def seed_capacity(d, s, n, b, seed):
     """The highest step held with every step run below it held, as text: '≥' when the highest step
-    run held, '<' when the first failure's step below wasn't run. At seeds 101-103 the steps
+    run held, '<' when the first failure's step below wasn't run. At seeds 101-107 the steps
     between p = 0 and the edge weren't run; they're taken as held."""
     top = 0
     for p in EXTENDED[1:]:
@@ -72,8 +72,8 @@ def spread(values, fmt):
 
 
 print("### Capacity: privacy tx/s held on top of 15 signature tx/s\n")
-print("At seeds 100 / 101 / 102 / 103, one value where all four agree. '≥': the highest rung run held "
-      "(seed 100 ran to 96, seeds 101–103 to 72).\n")
+print("At seeds 100 to 107 in order, one value where all eight agree. '≥': the highest rung run held "
+      "(seed 100 ran to 96, seeds 101–107 to 72).\n")
 for b, title in ((6, "six-object block"), (501, "501-object block")):
     print(f"**{title}**\n")
     print("| design | " + " | ".join(f"{SETTINGS[s]}, {n:,} nodes" for s in SETTINGS for n in (100, 1000)) + " |")
@@ -82,7 +82,7 @@ for b, title in ((6, "six-object block"), (501, "501-object block")):
         print(f"| {NAMES[d]} | " + " | ".join(capacity_cell(d, s, n, b) for s in SETTINGS for n in (100, 1000)) + " |")
     print()
 
-print("### Today's load (15 signature tx/s, p = 0), six-object block: mean over seeds 100–103 (range)\n")
+print("### Today's load (15 signature tx/s, p = 0), six-object block: mean over seeds 100–107 (range)\n")
 for what, f, fmt in (("Upload per node, Mbit/s", mbps, ".2f"), ("Delay, slots of 12 s", delay, ".2f")):
     print(f"**{what}**\n")
     print("| design | " + " | ".join(f"{SETTINGS[s]}, {n:,} nodes" for s in SETTINGS for n in (100, 1000)) + " |")
