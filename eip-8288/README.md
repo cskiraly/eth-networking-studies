@@ -1,7 +1,7 @@
 # EIP-8288: the networking side of recursive aggregation, the record
 
 The runs, their configurations and the data behind two texts:
-- *EIP-8288: the networking side of recursive aggregation*, ethresear.ch, November 2026;
+- [EIP-8288: the networking side of recursive aggregation](https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263), ethresear.ch, 18 November 2026;
 - its reader page, [EIP-8288 First Questions](https://claude.ai/artifact/18s7FFBBddd3YMFz2kcQHv),
   version 11.
 

@@ -24,11 +24,11 @@ ends with a ready-made citation and its BibTeX. `CITATION.cff` describes the rep
 | `seacast-u1` | [SEACAST: fast, lean, sampled broadcast for Ethereum, with an executable spec and a formal model](https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167), version 1 of its living text, [`seacast/`](seacast/), and its record, 2026-10-29 |
 | `eip-8288-networking` | [EIP-8288 First Questions](https://claude.ai/artifact/18s7FFBBddd3YMFz2kcQHv), version 11, and the first version of its record, [`eip-8288/`](eip-8288/), 2026-11-11 |
 | `seacast-u2` | [SEACAST: fast, lean, sampled broadcast for Ethereum, with an executable spec and a formal model](https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167), version 2 of its living text, [`seacast/`](seacast/), and its record, [`seacast/updates/u2/`](seacast/updates/u2/), 2026-11-17 |
-| `eip-8288-networking-2` | *EIP-8288: the networking side of recursive aggregation*, on ethresear.ch, and its reader page, [EIP-8288 First Questions](https://claude.ai/artifact/18s7FFBBddd3YMFz2kcQHv), version 11, and the record's second version, [`eip-8288/`](eip-8288/), which adds 2,299 runs, 2026-11-18 |
+| `eip-8288-networking-2` | [EIP-8288: the networking side of recursive aggregation](https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263) and its reader page, [EIP-8288 First Questions](https://claude.ai/artifact/18s7FFBBddd3YMFz2kcQHv), version 11, and the record's second version, [`eip-8288/`](eip-8288/), which adds 2,299 runs, 2026-11-18 |
 
 ## `eip-8288-networking-2`
 
-The code behind *EIP-8288: the networking side of recursive aggregation* and version 11 of its
+The code behind [EIP-8288: the networking side of recursive aggregation](https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263) and version 11 of its
 reader page, *EIP-8288 First Questions*: a simulator of EIP-8288's mempool aggregation, and the
 leanVM whose proving times price it. Their record, [`eip-8288/`](eip-8288/), holds the
 configuration of every run, the data behind each figure and table, the scripts that read the runs
@@ -48,7 +48,7 @@ At this tag the other submodules of the earlier publications do not exist.
 How to rerun a cell is in [`eip-8288/README.md`](eip-8288/README.md); each part's README says how its
 scripts read the runs.
 
-**Cite as.** Csaba Kiraly, "EIP-8288: the networking side of recursive aggregation", ethresear.ch, November 2026. Data and code: <https://github.com/cskiraly/eth-networking-studies>, tag `eip-8288-networking-2`.
+**Cite as.** Csaba Kiraly, "EIP-8288: the networking side of recursive aggregation", ethresear.ch, 18 November 2026, <https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263>. Data and code: <https://github.com/cskiraly/eth-networking-studies>, tag `eip-8288-networking-2`.
 
 <details><summary>BibTeX</summary>
 
@@ -59,6 +59,7 @@ scripts read the runs.
   howpublished = {ethresear.ch},
   year         = {2026},
   month        = nov,
+  url          = {https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263},
   note         = {Data and code: \url{https://github.com/cskiraly/eth-networking-studies}, tag eip-8288-networking-2}
 }
 ```
