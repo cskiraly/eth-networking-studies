@@ -34,9 +34,9 @@ leanVM whose proving times price it. Their record, [`eip-8288/`](eip-8288/), hol
 configuration of every run, the data behind each figure and table, the scripts that read the runs
 into them (each rerun to its file byte for byte), and replays of 42 cells at the pinned code.
 
-`eip-8288-networking` (2026-11-11) is the record's first version: the same pins, without the 2,299
-runs added since (the 845 ms anchor, the runs at 10,000 nodes and their controls, pull with one
-builder at 7,740 B, and seeds 104–107 of cells that had four).
+The record's first version is `eip-8288-networking` (2026-11-11, [below](#eip-8288-networking)): the
+same pins, without the 2,299 runs added since (the 845 ms anchor, the runs at 10,000 nodes and their
+controls, pull with one builder at 7,740 B, and seeds 104–107 of cells that had four).
 
 | directory | repository | commit | role |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ scripts read the runs.
 <details><summary>BibTeX</summary>
 
 ```bibtex
-@misc{kiraly2026eip8288networking,
+@misc{kiraly2026eip8288networking2,
   author       = {Kiraly, Csaba},
   title        = {{EIP-8288}: the networking side of recursive aggregation},
   howpublished = {ethresear.ch},
@@ -94,6 +94,39 @@ At this tag the other submodules of the earlier publications do not exist.
   month        = oct,
   url          = {https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167},
   note         = {Update 2. Data and code: \url{https://github.com/cskiraly/eth-networking-studies}, tag seacast-u2}
+}
+```
+</details>
+
+## `eip-8288-networking`
+
+The code behind *EIP-8288: the networking side of recursive aggregation* and version 11 of its
+reader page, *EIP-8288 First Questions*: a simulator of EIP-8288's mempool aggregation, and the
+leanVM whose proving times price it. Their record, [`eip-8288/`](eip-8288/), holds the
+configuration of every run, the data behind each figure and table, the scripts that read the runs
+into them (each rerun to its file byte for byte), and a replay of 25 cells at the pinned code.
+
+| directory | repository | commit | role |
+| --- | --- | --- | --- |
+| `stark-mempool-sim/` | [cskiraly/stark-mempool-sim](https://github.com/cskiraly/stark-mempool-sim), tag `first-questions-v11`, branch `netsim/v2` | `d6b1dd919d` | version 2.5 of a discrete-event simulation of EIP-8288 in Python, a fork of [asn-d6/stark-mempool-sim](https://github.com/asn-d6/stark-mempool-sim); every run is one `bench.mainnet` command from its root |
+| `leanVM/` | [leanEthereum/leanVM](https://github.com/leanEthereum/leanVM) | `990b935263` | the leanVM whose folds were timed for calibration v2's prices, and for version 11's figures cpu-model and cores |
+
+How to rerun a cell is in [`eip-8288/README.md`](eip-8288/README.md); each part's README says how its
+scripts read the runs.
+
+**Cite as.** Csaba Kiraly, "EIP-8288: the networking side of recursive aggregation", ethresear.ch, 18 November 2026, <https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263>. Data and code: <https://github.com/cskiraly/eth-networking-studies>, tag `eip-8288-networking`.
+
+<details><summary>BibTeX</summary>
+
+```bibtex
+@misc{kiraly2026eip8288networking,
+  author       = {Kiraly, Csaba},
+  title        = {{EIP-8288}: the networking side of recursive aggregation},
+  howpublished = {ethresear.ch},
+  year         = {2026},
+  month        = nov,
+  url          = {https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263},
+  note         = {Data and code: \url{https://github.com/cskiraly/eth-networking-studies}, tag eip-8288-networking}
 }
 ```
 </details>
