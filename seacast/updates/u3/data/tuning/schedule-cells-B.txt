@@ -1,0 +1,9 @@
+32 KiB dcb20: R=6 unit=4K leo8, 10 cells, 0.2040 s, 4.53 copies
+64 KiB dcb20: R=6 unit=4K leo8, 10 cells, 0.2140 s, 4.47 copies
+128 KiB dcb20: R=6 unit=4K leo8, 10 cells, 0.2300 s, 4.38 copies
+256 KiB dcb20: R=4 unit=16K leo8, 10 cells, 0.2800 s, 3.12 copies
+512 KiB dcb20: R=3 unit=16K leo8, 10 cells, 0.3340 s, 2.65 copies
+1024 KiB dcb20: R=2 unit=16K leo8, 10 cells, 0.4420 s, 2.34 copies
+2048 KiB dcb20: R=2 unit=16K leo8, 10 cells, 0.6255 s, 2.09 copies
+4096 KiB dcb20: R=2 unit=32K leo8, 10 cells, 0.8910 s, 1.76 copies
+8 points written, 0 refused; known answer (schedule.py's medians): equal at every point

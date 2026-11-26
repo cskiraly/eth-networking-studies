@@ -1,0 +1,9 @@
+size_kib,network,host,default,default_s,default_copies,preferred,preferred_s,preferred_copies,preferred_spec,preferred_marks,naming,also_named,time_gap_pct,bytes_gap_pct,faster_of_10,lighter_of_10,verdict,outcome,flags,gossipsub_s,gossipsub_copies
+32,dcb20,B,R=4 unit=16K leo8,0.2400,3.50,R=6 unit=8K leo8,0.2120,4.12,UNIT,,both,R=6 unit=16K leo8,11.59,-18.57,10,0,clearly faster and clearly heavier,CHANGE,,0.2555,5.30
+64,dcb20,B,R=4 unit=16K leo8,0.2475,3.45,R=6 unit=4K leo8,0.2140,4.47,UNIT,,both,R=8 unit=4K leo8 rfast=8,13.30,-29.00,10,0,clearly faster and clearly heavier,CHANGE,,0.3400,5.26
+128,dcb20,B,R=4 unit=16K leo8,0.2565,3.31,R=4 unit=8K leo8,0.2430,3.48,UNIT,,both,R=6 unit=8K leo8,5.34,-5.89,10,1,close,DEFAULT HOLDS,"SPLIT: R=3 unit=16K leo8, not named, clears the bar against the default; the outcome follows the named settings",,
+256,dcb20,B,R=4 unit=16K leo8,0.2800,3.12,R=4 unit=8K leo8,0.2690,3.27,UNIT,,both,R=6 unit=8K leo8,4.35,-3.42,10,0,close,DEFAULT HOLDS,,,
+512,dcb20,B,R=3 unit=16K leo8,0.3340,2.65,R=4 unit=16K leo8,0.3345,2.90,-,,both,R=4 unit=8K leo8,-0.45,-9.89,2,0,clearly heavier,DEFAULT HOLDS,,,
+1024,dcb20,B,R=2 unit=16K leo8,0.4420,2.34,R=2 unit=32K leo8,0.4585,2.20,UNIT,,both,R=2 unit=16K leo8,-3.38,4.85,0,10,clearly lighter,CHANGE,,,
+2048,dcb20,B,R=2 unit=16K leo8,0.6255,2.09,R=2 unit=32K leo8,0.6150,1.99,UNIT,,both,R=2 unit=16K leo8,0.40,4.30,6,10,clearly lighter,CHANGE,,,
+4096,dcb20,B,R=2 unit=16K plain,1.1265,1.79,R=2 unit=64K leo8,0.9075,1.74,UNIT+MAX_SEGMENT_SIZE,,both,R=2 unit=32K leo8,19.08,2.87,10,10,clearly faster,CHANGE,"PREFERRED NOT SELECTED: the change goes to R=2 unit=64K leo8, the best's neighbour, not a setting stage 2 selected",,

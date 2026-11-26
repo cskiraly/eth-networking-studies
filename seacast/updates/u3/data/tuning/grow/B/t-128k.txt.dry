@@ -1,0 +1,1 @@
+DRY id=seacast_dcb20_4096k_s7_r1_u128_leo8_oppgroup_cnt tag=aadaptcf_both_cancel_rare_rt4b_hc_pr1_hp2_sc_selfewest_hoseonstfs_pggroup_pace16_unit128k_m6_dcb20_v05p4r_brd16_leo8_oppgroup_cnt_p4096k_s0a_q0_seed7 arm=seacast net=dcb20 size=4096 seed=7 nodes=500 K=32 N=64 code=leo8 R=1 unit=128 rsx=1 rfast=6 ask=200 tgt=20 proj=2 fault=none loss=none disc=arm count=1 bound=group

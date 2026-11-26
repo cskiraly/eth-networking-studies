@@ -1,0 +1,9 @@
+size_kib,network,default,schedule,schedule_s,schedule_copies,time_gap_pct,bytes_gap_pct,faster_of_10,lighter_of_10,verdict,holds,own_best,own_outcome
+32,all-home,R=4 unit=16K leo8,R=6 unit=4K leo8,0.2255,4.54,21.24,-32.97,10,0,clearly faster and clearly heavier,yes,R=6 unit=4K leo8,CHANGE
+64,all-home,R=4 unit=16K leo8,R=6 unit=4K leo8,0.2395,4.40,19.48,-34.06,10,0,clearly faster and clearly heavier,yes,R=6 unit=4K leo8,CHANGE
+128,all-home,R=4 unit=16K leo8,R=6 unit=4K leo8,0.2655,4.49,16.16,-44.97,10,0,clearly faster and clearly heavier,yes,R=6 unit=4K leo8,CHANGE
+256,all-home,R=4 unit=16K leo8,the default,0.3555,2.97,,,,,,yes,R=4 unit=16K leo8,DEFAULT HOLDS
+512,all-home,R=3 unit=16K leo8,the default,0.4510,2.40,,,,,,yes,R=3 unit=16K leo8,DEFAULT HOLDS
+1024,all-home,R=2 unit=16K leo8,the default,0.6495,1.83,,,,,,yes,R=3 unit=16K leo8,CHANGE
+2048,all-home,R=2 unit=16K leo8,the default,0.8725,1.77,,,,,,yes,R=2 unit=16K leo8,DEFAULT HOLDS
+4096,all-home,R=2 unit=16K plain,R=2 unit=32K leo8,1.3640,1.60,10.56,-2.34,10,0,clearly faster,yes,R=2 unit=32K leo8,CHANGE

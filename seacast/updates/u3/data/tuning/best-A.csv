@@ -1,0 +1,9 @@
+size_kib,network,host,default,default_s,default_copies,preferred,preferred_s,preferred_copies,preferred_spec,preferred_marks,naming,also_named,time_gap_pct,bytes_gap_pct,faster_of_10,lighter_of_10,verdict,outcome,flags,gossipsub_s,gossipsub_copies
+32,all-home,A,R=4 unit=16K leo8,0.2890,3.46,R=6 unit=4K leo8,0.2255,4.54,UNIT,,both,R=8 unit=4K leo8 rfast=8,21.24,-32.97,10,0,clearly faster and clearly heavier,CHANGE,,0.2840,5.21
+64,all-home,A,R=4 unit=16K leo8,0.2965,3.30,R=6 unit=4K leo8,0.2395,4.40,UNIT,,both,R=8 unit=4K leo8 rfast=8,19.48,-34.06,10,0,clearly faster and clearly heavier,CHANGE,,0.4065,5.06
+128,all-home,A,R=4 unit=16K leo8,0.3195,3.12,R=6 unit=4K leo8,0.2655,4.49,UNIT,,both,R=8 unit=4K leo8 rfast=8,16.16,-44.97,10,0,clearly faster and clearly heavier,CHANGE,,,
+256,all-home,A,R=4 unit=16K leo8,0.3555,2.97,R=4 unit=4K leo8,0.3310,3.49,UNIT,,both,R=6 unit=4K leo8,8.13,-18.08,10,0,clearly heavier,DEFAULT HOLDS,,,
+512,all-home,A,R=3 unit=16K leo8,0.4510,2.40,R=3 unit=8K leo8,0.4335,2.58,UNIT,,both,R=4 unit=8K leo8,3.17,-8.76,10,0,clearly heavier,DEFAULT HOLDS,,,
+1024,all-home,A,R=2 unit=16K leo8,0.6495,1.83,R=3 unit=16K leo8,0.6050,2.33,-,,both,R=3 unit=8K leo8,6.91,-27.52,10,0,clearly faster and clearly heavier,CHANGE,,,
+2048,all-home,A,R=2 unit=16K leo8,0.8725,1.77,R=2 unit=16K leo8,0.8725,1.77,-,,both,R=3 unit=16K leo8,,,,,,DEFAULT HOLDS,"SPLIT: R=2 unit=32K leo8, not named, clears the bar against the default; the outcome follows the named settings",,
+4096,all-home,A,R=2 unit=16K plain,1.5115,1.57,R=2 unit=32K leo8,1.3640,1.60,UNIT,,both,R=2 unit=16K leo16,10.56,-2.34,10,0,clearly faster,CHANGE,,,

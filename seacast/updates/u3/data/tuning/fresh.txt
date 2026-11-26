@@ -1,0 +1,39 @@
+seeds 1024, 2048, 3072 (fresh networks); 0 rows of other seeds not used; SEACAST binary md5 58dff1644574746fd59ce8361db32912; clear: on all three seeds and beyond the noise allowance
+
+== 32 KiB, all-home (host A)
+   the default R=4 unit=16K leo8: 0.2620 s, 3.31 copies (median of three)
+   the schedule R=6 unit=4K leo8: 0.1970 s, 4.37 copies
+   against the default: faster on 3 of 3 (median +22.52 %), lighter on 0 of 3 (median -34.10 %): clearly faster and clearly heavier
+   CONFIRMED: clearly faster on fresh networks
+
+== 32 KiB, dcb20 (host B)
+   the default R=4 unit=16K leo8: 0.2150 s, 3.49 copies (median of three)
+   the schedule R=6 unit=4K leo8: 0.1860 s, 4.26 copies
+   against the default: faster on 3 of 3 (median +13.49 %), lighter on 0 of 3 (median -15.31 %): clearly faster and clearly heavier
+   CONFIRMED: clearly faster on fresh networks
+
+== 64 KiB, all-home (host A)
+   the default R=4 unit=16K leo8: 0.2700 s, 3.21 copies (median of three)
+   the schedule R=6 unit=4K leo8: 0.2150 s, 4.23 copies
+   against the default: faster on 3 of 3 (median +19.83 %), lighter on 0 of 3 (median -32.33 %): clearly faster and clearly heavier
+   CONFIRMED: clearly faster on fresh networks
+
+== 64 KiB, dcb20 (host B)
+   the default R=4 unit=16K leo8: 0.2190 s, 3.30 copies (median of three)
+   the schedule R=6 unit=4K leo8: 0.1960 s, 4.32 copies
+   against the default: faster on 3 of 3 (median +13.13 %), lighter on 0 of 3 (median -30.81 %): clearly faster and clearly heavier
+   CONFIRMED: clearly faster on fresh networks
+
+== 128 KiB, all-home (host A)
+   the default R=4 unit=16K leo8: 0.2950 s, 2.93 copies (median of three)
+   the schedule R=6 unit=4K leo8: 0.2450 s, 4.47 copies
+   against the default: faster on 3 of 3 (median +14.56 %), lighter on 0 of 3 (median -52.76 %): clearly faster and clearly heavier
+   CONFIRMED: clearly faster on fresh networks
+
+== 128 KiB, dcb20 (host B)
+   the default R=4 unit=16K leo8: 0.2380 s, 3.06 copies (median of three)
+   the schedule R=6 unit=4K leo8: 0.2140 s, 3.98 copies
+   against the default: faster on 3 of 3 (median +10.08 %), lighter on 0 of 3 (median -30.09 %): clearly faster and clearly heavier
+   CONFIRMED: clearly faster on fresh networks
+
+6 confirmed: 32 all-home, 32 dcb20, 64 all-home, 64 dcb20, 128 all-home, 128 dcb20; to the author: none; refused: none

@@ -1,0 +1,319 @@
+seeds [7, 8, 9, 10, 11, 12, 13, 14, 15, 16]; the stage's offer bound: group; 0 rows of other seeds not used; SEACAST binary md5 58dff1644574746fd59ce8361db32912
+
+== 32 KiB, all-home (host A; payload 1 compressed 0.0223 MiB)
+   gossipsub, the whole message: 0.2840 s, 5.21 copies
+   R=8 unit=4K leo8 rfast=8           0.2240 s  0.1111 MiB  4.99 copies  K=8   spec UNIT+R_FAST FRONT
+   R=6 unit=4K leo8                   0.2255 s  0.1012 MiB  4.54 copies  K=8   spec UNIT FRONT
+   R=8 unit=8K leo8 rfast=8           0.2290 s  0.0979 MiB  4.39 copies  K=4   spec UNIT+R_FAST SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=2K leo8                   0.2350 s  0.1243 MiB  5.58 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K leo8                   0.2390 s  0.0944 MiB  4.24 copies  K=4   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K leo8                   0.2760 s  0.0966 MiB  4.33 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K leo8                   0.2820 s  0.0838 MiB  3.76 copies  K=4   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  0.2830 s  0.0897 MiB  4.03 copies  K=2   spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K unc                    0.2880 s  0.0976 MiB  4.38 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo8                  0.2890 s  0.0772 MiB  3.46 copies  K=2   spec - FRONT base
+   R=3 unit=2K leo8                   0.2920 s  0.1062 MiB  4.77 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K unc                   0.2940 s  0.0898 MiB  4.03 copies  K=2   spec uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K leo8                   0.3000 s  0.0789 MiB  3.54 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=8K leo8                   0.3050 s  0.0744 MiB  3.34 copies  K=4   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  0.3200 s  0.1116 MiB  5.01 copies  K=1   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=4K unc                    0.3250 s  0.1117 MiB  5.01 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K unc                   0.3290 s  0.0970 MiB  4.35 copies  K=1   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K leo8                  0.3420 s  0.0636 MiB  2.85 copies  K=2   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  0.3540 s  0.0774 MiB  3.47 copies  K=1   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K unc                    0.3710 s  0.0724 MiB  3.25 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K unc                   0.3810 s  0.0653 MiB  2.93 copies  K=2   spec uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K unc                    0.3860 s  0.0831 MiB  3.73 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K leo8                   0.3890 s  0.0751 MiB  3.37 copies  K=8   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K leo8                   0.3990 s  0.0607 MiB  2.72 copies  K=4   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K unc                   0.4090 s  0.0479 MiB  2.15 copies  K=2   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K leo8                  0.4110 s  0.0543 MiB  2.44 copies  K=2   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=8K unc                    0.4130 s  0.0526 MiB  2.36 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K unc                   0.4130 s  0.0634 MiB  2.84 copies  K=1   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.4260 s  0.0582 MiB  2.61 copies  K=1   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K unc                   0.4590 s  0.0339 MiB  1.52 copies  K=2   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K unc                    0.4630 s  0.0372 MiB  1.67 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K unc                    0.4640 s  0.0620 MiB  2.78 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K unc                   0.4710 s  0.0441 MiB  1.98 copies  K=1   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K unc                    0.4730 s  0.0448 MiB  2.01 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.4800 s  0.0466 MiB  2.09 copies  K=1   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo8                   0.4880 s  0.0553 MiB  2.48 copies  K=4   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K leo8                   0.4900 s  0.0670 MiB  3.01 copies  K=8   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.5030 s  0.0489 MiB  2.19 copies  K=2   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K unc                   0.5200 s  0.0332 MiB  1.49 copies  K=1   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K unc                   0.5360 s  0.0280 MiB  1.26 copies  K=2   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K unc                    0.5480 s  0.0376 MiB  1.69 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.5530 s  0.0458 MiB  2.06 copies  K=1   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K unc                    0.5550 s  0.0309 MiB  1.39 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K unc                   0.5970 s  0.0278 MiB  1.25 copies  K=1   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   fastest: R=8 unit=4K leo8 rfast=8 against the base R=4 unit=16K leo8: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=8 unit=8K leo8 rfast=8 is short (3 of 10 seeds): no comparison
+   fastest: R=8 unit=4K leo8 rfast=8 against the best neighbour R=6 unit=4K leo8: faster on 6 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 5, lighter on 0
+
+== 64 KiB, all-home (host A; payload 1 compressed 0.0447 MiB)
+   gossipsub, the whole message: 0.4065 s, 5.06 copies
+   R=6 unit=2K leo8                   0.2350 s  0.2391 MiB  5.34 copies  K=32  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=8 unit=4K leo8 rfast=8           0.2385 s  0.2170 MiB  4.85 copies  K=16  spec UNIT+R_FAST FRONT
+   R=6 unit=4K leo8                   0.2395 s  0.1967 MiB  4.40 copies  K=16  spec UNIT FRONT
+   R=8 unit=8K leo8 rfast=8           0.2620 s  0.1947 MiB  4.35 copies  K=8   spec UNIT+R_FAST SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K leo8                   0.2630 s  0.1823 MiB  4.07 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K leo8                   0.2830 s  0.1898 MiB  4.24 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K leo8                   0.2910 s  0.1635 MiB  3.65 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  0.2910 s  0.1754 MiB  3.92 copies  K=4   spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo8                  0.2965 s  0.1477 MiB  3.30 copies  K=4   spec - FRONT base
+   R=3 unit=4K leo8                   0.3080 s  0.1609 MiB  3.60 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=2K leo8                   0.3200 s  0.2082 MiB  4.65 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=8K leo8                   0.3220 s  0.1401 MiB  3.13 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K leo8                  0.3300 s  0.1329 MiB  2.97 copies  K=4   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K unc                   0.3370 s  0.1818 MiB  4.06 copies  K=4   spec uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  0.3530 s  0.1726 MiB  3.86 copies  K=2   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=4K unc                    0.3610 s  0.2237 MiB  5.00 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K unc                    0.3620 s  0.1996 MiB  4.46 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K unc                   0.3870 s  0.1698 MiB  3.80 copies  K=2   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  0.3890 s  0.1514 MiB  3.38 copies  K=2   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K unc                   0.3990 s  0.1322 MiB  2.95 copies  K=4   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K leo8                   0.4030 s  0.1465 MiB  3.27 copies  K=16  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K leo8                   0.4070 s  0.1218 MiB  2.72 copies  K=8   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K unc                    0.4070 s  0.1467 MiB  3.28 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K leo8                  0.4290 s  0.1060 MiB  2.37 copies  K=4   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K unc                   0.4330 s  0.0957 MiB  2.14 copies  K=4   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K unc                    0.4330 s  0.1682 MiB  3.76 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.4350 s  0.1229 MiB  2.75 copies  K=2   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=64K unc                   0.4360 s  0.1795 MiB  4.01 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=64K leo8                  0.4570 s  0.2110 MiB  4.72 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=8K unc                    0.4730 s  0.1063 MiB  2.38 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K unc                   0.4770 s  0.1198 MiB  2.68 copies  K=2   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.4780 s  0.0972 MiB  2.17 copies  K=2   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K unc                   0.4800 s  0.0881 MiB  1.97 copies  K=2   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K unc                    0.4840 s  0.1258 MiB  2.81 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=64K leo8                  0.4870 s  0.1418 MiB  3.17 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K unc                    0.4890 s  0.0753 MiB  1.68 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K leo8                   0.4960 s  0.1292 MiB  2.89 copies  K=16  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K unc                   0.5000 s  0.0680 MiB  1.52 copies  K=4   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo8                   0.5020 s  0.1059 MiB  2.37 copies  K=8   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.5080 s  0.0939 MiB  2.10 copies  K=4   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K unc                    0.5090 s  0.0910 MiB  2.03 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.5360 s  0.0882 MiB  1.97 copies  K=2   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K unc                   0.5520 s  0.0650 MiB  1.45 copies  K=2   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K unc                   0.5700 s  0.0557 MiB  1.25 copies  K=4   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=64K unc                   0.5770 s  0.1161 MiB  2.60 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K unc                    0.5780 s  0.0614 MiB  1.37 copies  K=8   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  0.5830 s  0.0912 MiB  2.04 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K unc                    0.5870 s  0.0750 MiB  1.68 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=64K leo8                  0.5930 s  0.1131 MiB  2.53 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K unc                   0.6110 s  0.0559 MiB  1.25 copies  K=2   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=64K unc                   0.6330 s  0.0884 MiB  1.98 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  0.6330 s  0.0894 MiB  2.00 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K unc                   0.6570 s  0.0705 MiB  1.58 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K unc                   0.6940 s  0.0607 MiB  1.36 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   fastest: R=8 unit=4K leo8 rfast=8 against the base R=4 unit=16K leo8: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=8 unit=8K leo8 rfast=8 is short (1 of 10 seeds): no comparison
+   fastest: R=8 unit=4K leo8 rfast=8 against the best neighbour R=6 unit=4K leo8: faster on 6 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 4, lighter on 0
+
+== 128 KiB, all-home (host A; payload 1 compressed 0.0896 MiB)
+   R=6 unit=4K leo8                   0.2655 s  0.4022 MiB  4.49 copies  K=32  spec UNIT FRONT
+   R=8 unit=4K leo8 rfast=8           0.2700 s  0.4722 MiB  5.27 copies  K=32  spec UNIT+R_FAST
+   R=8 unit=8K leo8 rfast=8           0.2840 s  0.4113 MiB  4.59 copies  K=16  spec UNIT+R_FAST SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K leo8                   0.2900 s  0.3765 MiB  4.20 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=2K leo8                   0.2920 s  0.5478 MiB  6.11 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K leo8                   0.3040 s  0.3145 MiB  3.51 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K leo8                   0.3060 s  0.3512 MiB  3.92 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  0.3170 s  0.3665 MiB  4.09 copies  K=8   spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo8                  0.3195 s  0.2797 MiB  3.12 copies  K=8   spec - FRONT base
+   R=3 unit=2K leo8                   0.3300 s  0.3964 MiB  4.42 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K leo8                   0.3340 s  0.3144 MiB  3.51 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K leo8                  0.3470 s  0.2614 MiB  2.92 copies  K=8   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=8K leo8                   0.3470 s  0.2801 MiB  3.13 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  0.3780 s  0.3521 MiB  3.93 copies  K=4   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  0.3960 s  0.2773 MiB  3.09 copies  K=4   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K unc                   0.4010 s  0.3821 MiB  4.26 copies  K=8   spec uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K leo8                   0.4210 s  0.2805 MiB  3.13 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K leo8                   0.4240 s  0.2358 MiB  2.63 copies  K=16  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K unc                    0.4240 s  0.4072 MiB  4.54 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K leo8                  0.4340 s  0.2129 MiB  2.38 copies  K=8   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=4K unc                    0.4420 s  0.4564 MiB  5.09 copies  K=32  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K unc                   0.4430 s  0.3520 MiB  3.93 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K unc                    0.4460 s  0.2960 MiB  3.30 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.4500 s  0.2505 MiB  2.80 copies  K=4   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K unc                   0.4500 s  0.2701 MiB  3.01 copies  K=8   spec uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K unc                    0.4650 s  0.3396 MiB  3.79 copies  K=32  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K unc                   0.4720 s  0.1951 MiB  2.18 copies  K=8   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.5050 s  0.1960 MiB  2.19 copies  K=4   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K leo8                   0.5050 s  0.2437 MiB  2.72 copies  K=32  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo8                   0.5060 s  0.1998 MiB  2.23 copies  K=16  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K unc                    0.5120 s  0.2527 MiB  2.82 copies  K=32  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=8K unc                    0.5150 s  0.2145 MiB  2.39 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K unc                    0.5160 s  0.1519 MiB  1.70 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K unc                   0.5180 s  0.2420 MiB  2.70 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.5310 s  0.1800 MiB  2.01 copies  K=8   spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K unc                   0.5360 s  0.1367 MiB  1.53 copies  K=8   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.5530 s  0.1774 MiB  1.98 copies  K=4   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K unc                   0.5590 s  0.1781 MiB  1.99 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K unc                    0.5740 s  0.1832 MiB  2.04 copies  K=32  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K unc                   0.5810 s  0.1299 MiB  1.45 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K unc                   0.6050 s  0.1119 MiB  1.25 copies  K=8   spec uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K unc                    0.6100 s  0.1521 MiB  1.70 copies  K=32  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K unc                    0.6110 s  0.1239 MiB  1.38 copies  K=16  spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  0.6130 s  0.1902 MiB  2.12 copies  K=2   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  0.6220 s  0.1699 MiB  1.90 copies  K=2   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=128K leo8                 0.6540 s  0.3910 MiB  4.36 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K unc                   0.6680 s  0.1092 MiB  1.22 copies  K=4   spec UNIT+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=128K unc                  0.6780 s  0.3437 MiB  3.84 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=128K leo8                 0.7080 s  0.1842 MiB  2.06 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=128K leo8                 0.7300 s  0.2190 MiB  2.44 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=128K leo8                 0.7460 s  0.2735 MiB  3.05 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=128K unc                  0.7520 s  0.2227 MiB  2.49 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=128K leo8                 0.7770 s  0.1734 MiB  1.94 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=128K unc                  0.8030 s  0.1744 MiB  1.95 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=128K unc                  0.8080 s  0.1268 MiB  1.42 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=128K unc                  0.8160 s  0.1447 MiB  1.61 copies  K=1   spec UNIT+MAX_SEGMENT_SIZE+uncoded (uncoded) SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   fastest: R=6 unit=4K leo8 against the base R=4 unit=16K leo8: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=4 unit=4K leo8 is short (1 of 10 seeds): no comparison
+   neighbour R=6 unit=2K leo8 is short (1 of 10 seeds): no comparison
+   neighbour R=6 unit=8K leo8 is short (1 of 10 seeds): no comparison
+   fastest: R=6 unit=4K leo8 against the best neighbour R=8 unit=4K leo8 rfast=8: faster on 7 of 10 seeds, lighter on 10 of 10; on the seeds that did not select it (7): faster on 5, lighter on 7
+
+== 256 KiB, all-home (host A; payload 1 compressed 0.1795 MiB)
+   R=4 unit=4K leo8                   0.3310 s  0.6270 MiB  3.49 copies  K=64  spec UNIT FRONT
+   R=6 unit=4K leo8                   0.3340 s  0.8652 MiB  4.82 copies  K=64  spec UNIT
+   R=4 unit=8K leo8                   0.3360 s  0.5482 MiB  3.05 copies  K=32  spec UNIT FRONT
+   R=6 unit=8K leo8                   0.3490 s  0.7622 MiB  4.25 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K leo8                   0.3500 s  0.5661 MiB  3.15 copies  K=64  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=2K leo8                   0.3540 s  0.8265 MiB  4.61 copies  K=128 spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo8                  0.3555 s  0.5332 MiB  2.97 copies  K=16  spec - FRONT base
+   R=3 unit=8K leo8                   0.3580 s  0.4932 MiB  2.75 copies  K=32  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  0.3700 s  0.7110 MiB  3.96 copies  K=16  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K leo8                  0.3910 s  0.4656 MiB  2.59 copies  K=16  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  0.4270 s  0.5277 MiB  2.94 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  0.4410 s  0.7314 MiB  4.08 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.4620 s  0.4501 MiB  2.51 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K leo8                   0.4650 s  0.5548 MiB  3.09 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K leo8                   0.4670 s  0.4505 MiB  2.51 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K leo8                  0.4790 s  0.4034 MiB  2.25 copies  K=16  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K leo8                   0.5620 s  0.4747 MiB  2.64 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=64K leo8                  0.5680 s  0.4436 MiB  2.47 copies  K=4   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo8                   0.5690 s  0.3824 MiB  2.13 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.5730 s  0.3642 MiB  2.03 copies  K=8   spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.5790 s  0.3382 MiB  1.88 copies  K=16  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.5810 s  0.3373 MiB  1.88 copies  K=8   spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  0.6770 s  0.3756 MiB  2.09 copies  K=4   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  0.7030 s  0.3359 MiB  1.87 copies  K=4   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   fastest: R=4 unit=4K leo8 against the base R=4 unit=16K leo8: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=3 unit=4K leo8 is short (3 of 10 seeds): no comparison
+   neighbour R=4 unit=2K leo8 is short (3 of 10 seeds): no comparison
+   fastest: R=4 unit=4K leo8 against the best neighbour R=6 unit=4K leo8: faster on 7 of 10 seeds, lighter on 10 of 10; on the seeds that did not select it (7): faster on 5, lighter on 7
+
+== 512 KiB, all-home (host A; payload 1 compressed 0.3580 MiB)
+   R=4 unit=8K leo8                   0.4260 s  1.1637 MiB  3.25 copies  K=64  spec UNIT FRONT
+   R=3 unit=8K leo8                   0.4335 s  0.9224 MiB  2.58 copies  K=64  spec UNIT FRONT
+   R=3 unit=4K leo8                   0.4400 s  1.0983 MiB  3.07 copies  K=128 spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K leo8                  0.4510 s  0.8596 MiB  2.40 copies  K=32  spec - FRONT base
+   R=4 unit=16K leo8                  0.4530 s  1.0418 MiB  2.91 copies  K=32  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K leo8                   0.4700 s  1.3967 MiB  3.90 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K leo8                   0.4990 s  0.8189 MiB  2.29 copies  K=64  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K leo8                  0.5090 s  0.7446 MiB  2.08 copies  K=32  spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K leo8                   0.5100 s  1.0090 MiB  2.82 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  0.5140 s  1.0121 MiB  2.83 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  0.5250 s  1.4389 MiB  4.02 copies  K=32  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.5290 s  0.8416 MiB  2.35 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K leo8                   0.5320 s  1.5418 MiB  4.31 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=4K leo8                   0.5510 s  1.7254 MiB  4.82 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  0.5780 s  1.4039 MiB  3.92 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.6130 s  0.6566 MiB  1.83 copies  K=16  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo8                   0.6160 s  0.7431 MiB  2.08 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.6280 s  0.6534 MiB  1.82 copies  K=32  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K leo8                   0.6330 s  0.9098 MiB  2.54 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.6480 s  0.6104 MiB  1.70 copies  K=16  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  0.7300 s  0.6812 MiB  1.90 copies  K=8   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  0.8540 s  0.6323 MiB  1.77 copies  K=8   spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   fastest: R=4 unit=8K leo8 against the base R=3 unit=16K leo8: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=4 unit=16K leo8 is short (1 of 10 seeds): no comparison
+   neighbour R=4 unit=4K leo8 is short (1 of 10 seeds): no comparison
+   neighbour R=6 unit=8K leo8 is short (1 of 10 seeds): no comparison
+   fastest: R=4 unit=8K leo8 against the best neighbour R=3 unit=8K leo8: faster on 8 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+
+== 1024 KiB, all-home (host A; payload 1 compressed 0.7117 MiB)
+   R=3 unit=16K leo8                  0.6050 s  1.6618 MiB  2.33 copies  K=64  spec - FRONT
+   R=3 unit=8K leo8                   0.6100 s  1.8685 MiB  2.63 copies  K=128 spec UNIT
+   R=2 unit=16K leo8                  0.6495 s  1.3052 MiB  1.83 copies  K=64  spec - FRONT base
+   R=2 unit=8K leo8                   0.6500 s  1.4795 MiB  2.08 copies  K=128 spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K leo8                   0.6580 s  2.3321 MiB  3.28 copies  K=128 spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=4K leo16                  0.6630 s  2.2945 MiB  3.22 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo8                  0.6700 s  2.1794 MiB  3.06 copies  K=64  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.7080 s  1.5711 MiB  2.21 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  0.7160 s  2.0411 MiB  2.87 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=4K leo16                  0.7190 s  1.9153 MiB  2.69 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=4K leo16                  0.7350 s  2.7108 MiB  3.81 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.7440 s  1.3049 MiB  1.83 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  0.7440 s  2.4954 MiB  3.51 copies  K=64  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.7640 s  1.1588 MiB  1.63 copies  K=32  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.7640 s  1.1841 MiB  1.66 copies  K=64  spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K leo8                   0.7760 s  2.6407 MiB  3.71 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo8                   0.7920 s  1.3670 MiB  1.92 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=64K leo8                  0.8120 s  1.8856 MiB  2.65 copies  K=16  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=64K leo8                  0.8130 s  1.5440 MiB  2.17 copies  K=16  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  0.8210 s  2.5837 MiB  3.63 copies  K=32  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=4K leo16                  0.8290 s  1.7526 MiB  2.46 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=4K leo16                  0.8540 s  3.0935 MiB  4.35 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  0.8590 s  1.2843 MiB  1.80 copies  K=16  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=64K leo8                  0.8790 s  2.2341 MiB  3.14 copies  K=16  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  0.9810 s  1.1653 MiB  1.64 copies  K=16  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   fastest: R=3 unit=16K leo8 against the base R=2 unit=16K leo8: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=3 unit=32K leo8 is short (1 of 10 seeds): no comparison
+   neighbour R=4 unit=16K leo8 is short (1 of 10 seeds): no comparison
+   fastest: R=3 unit=16K leo8 against the best neighbour R=3 unit=8K leo8: faster on 7 of 10 seeds, lighter on 10 of 10; on the seeds that did not select it (7): faster on 5, lighter on 7
+
+== 2048 KiB, all-home (host A; payload 1 compressed 1.4243 MiB)
+   R=2 unit=16K leo8                  0.8725 s  2.5255 MiB  1.77 copies  K=128 spec - FRONT base
+   R=3 unit=16K leo8                  0.8740 s  3.1999 MiB  2.25 copies  K=128 spec -
+   R=2 unit=8K leo16                  0.9060 s  2.9642 MiB  2.08 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=32K leo8                  0.9295 s  2.3772 MiB  1.67 copies  K=64  spec UNIT FRONT
+   R=3 unit=8K leo16                  0.9480 s  3.5688 MiB  2.51 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo8                  0.9670 s  2.2634 MiB  1.59 copies  K=128 spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  0.9780 s  2.9707 MiB  2.09 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=32K leo8                  0.9960 s  2.1796 MiB  1.53 copies  K=64  spec UNIT SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo16                  1.0090 s  2.6179 MiB  1.84 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo8                  1.0130 s  3.7227 MiB  2.61 copies  K=128 spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=8K leo16                  1.0250 s  4.0051 MiB  2.81 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  1.0300 s  3.6957 MiB  2.59 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo8                  1.1100 s  4.1588 MiB  2.92 copies  K=128 spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=64K leo8                  1.1220 s  2.8792 MiB  2.02 copies  K=32  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  1.1290 s  2.3455 MiB  1.65 copies  K=32  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  1.1440 s  4.2364 MiB  2.97 copies  K=64  spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=64K leo8                  1.1730 s  3.4989 MiB  2.46 copies  K=32  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=8K leo16                  1.1750 s  4.3746 MiB  3.07 copies  K=256 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  1.2000 s  2.1173 MiB  1.49 copies  K=32  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=64K leo8                  1.2030 s  4.1383 MiB  2.91 copies  K=32  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   fastest: R=2 unit=16K leo8 is the base
+   neighbour R=1 unit=16K leo8 is short (3 of 10 seeds): no comparison
+   neighbour R=2 unit=8K leo16 is short (3 of 10 seeds): no comparison
+   fastest: R=2 unit=16K leo8 against the best neighbour R=3 unit=16K leo8: faster on 5 of 10 seeds, lighter on 10 of 10; on the seeds that did not select it (7): faster on 2, lighter on 7
+
+== 4096 KiB, all-home (host A; payload 1 compressed 2.8450 MiB)
+   R=2 unit=16K leo16                 1.3225 s  4.8866 MiB  1.72 copies  K=256 spec MAX_CHUNKS+offer lists FRONT
+   R=2 unit=32K leo8                  1.3640 s  4.5628 MiB  1.60 copies  K=128 spec UNIT FRONT
+   R=3 unit=16K leo16                 1.3840 s  5.6928 MiB  2.00 copies  K=256 spec MAX_CHUNKS+offer lists SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K leo16                 1.3900 s  4.4483 MiB  1.56 copies  K=256 spec MAX_CHUNKS+offer lists SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=8K leo16                  1.4450 s  5.7762 MiB  2.03 copies  K=512 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=32K leo8                  1.4670 s  5.5318 MiB  1.94 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=16K plain                 1.5115 s  4.4701 MiB  1.57 copies  K=256 spec - FRONT base
+   R=1 unit=32K leo8                  1.5160 s  4.0544 MiB  1.43 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K leo16                 1.5480 s  6.4961 MiB  2.28 copies  K=256 spec MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=2 unit=64K leo8                  1.5520 s  4.4598 MiB  1.57 copies  K=64  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=64K leo8                  1.5550 s  5.3604 MiB  1.88 copies  K=64  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=8K leo16                  1.5650 s  5.3030 MiB  1.86 copies  K=512 spec UNIT+MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=16K plain                 1.5870 s  3.9824 MiB  1.40 copies  K=256 spec - SHORT: no cell at seeds [10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=32K leo8                  1.6000 s  6.3139 MiB  2.22 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=3 unit=16K plain                 1.6140 s  5.6260 MiB  1.98 copies  K=256 spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=64K leo8                  1.6980 s  6.2694 MiB  2.20 copies  K=64  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=4 unit=16K plain                 1.7000 s  6.4901 MiB  2.28 copies  K=256 spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=1 unit=64K leo8                  1.7040 s  3.9860 MiB  1.40 copies  K=64  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K leo16                 1.7040 s  7.1249 MiB  2.50 copies  K=256 spec MAX_CHUNKS+offer lists SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=32K leo8                  1.7720 s  7.1494 MiB  2.51 copies  K=128 spec UNIT SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=64K leo8                  1.9060 s  7.1716 MiB  2.52 copies  K=64  spec UNIT+MAX_SEGMENT_SIZE SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   R=6 unit=16K plain                 1.9190 s  7.3020 MiB  2.57 copies  K=256 spec - SHORT: no cell at seeds [8, 9, 10, 11, 12, 13, 14, 15, 16]
+   fastest: R=2 unit=16K leo16 against the base R=2 unit=16K plain: faster on 10 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 7, lighter on 0
+   neighbour R=1 unit=16K leo16 is short (3 of 10 seeds): no comparison
+   neighbour R=2 unit=8K leo16 is short (3 of 10 seeds): no comparison
+   neighbour R=3 unit=16K leo16 is short (3 of 10 seeds): no comparison
+   fastest: R=2 unit=16K leo16 against the best neighbour R=2 unit=32K leo8: faster on 8 of 10 seeds, lighter on 0 of 10; on the seeds that did not select it (7): faster on 6, lighter on 0

@@ -1,0 +1,9 @@
+32 KiB all-home: R=6 unit=4K leo8, 10 cells, 0.2255 s, 4.54 copies
+64 KiB all-home: R=6 unit=4K leo8, 10 cells, 0.2395 s, 4.40 copies
+128 KiB all-home: R=6 unit=4K leo8, 10 cells, 0.2655 s, 4.49 copies
+256 KiB all-home: R=4 unit=16K leo8, 10 cells, 0.3555 s, 2.97 copies
+512 KiB all-home: R=3 unit=16K leo8, 10 cells, 0.4510 s, 2.40 copies
+1024 KiB all-home: R=2 unit=16K leo8, 10 cells, 0.6495 s, 1.83 copies
+2048 KiB all-home: R=2 unit=16K leo8, 10 cells, 0.8725 s, 1.77 copies
+4096 KiB all-home: R=2 unit=32K leo8, 10 cells, 1.3640 s, 1.60 copies
+8 points written, 0 refused; known answer (schedule.py's medians): equal at every point

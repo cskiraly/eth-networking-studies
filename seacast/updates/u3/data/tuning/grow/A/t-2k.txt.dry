@@ -1,0 +1,1 @@
+DRY id=seacast_home_256k_s7_r4_u2_leo8_oppgroup_cnt tag=aadaptcf_both_cancel_rare_rt4b_hc_pr4_hp2_sc_selfewest_hoseonstfs_pggroup_pace16_unit2k_m6_v05p4rdall_brd16_leo8_oppgroup_cnt_p256k_s0a_q0_seed7 arm=seacast net=home size=256 seed=7 nodes=500 K=128 N=256 code=leo8 R=4 unit=2 rsx=1 rfast=6 ask=200 tgt=20 proj=2 fault=none loss=none disc=all count=1 bound=group

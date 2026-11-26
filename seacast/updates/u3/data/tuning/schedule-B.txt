@@ -1,0 +1,48 @@
+seeds 7 to 16; SEACAST binary md5 58dff1644574746fd59ce8361db32912; the schedule: 32 KiB R=6 unit=4K leo8; 64 KiB R=6 unit=4K leo8; 128 KiB R=6 unit=4K leo8; 256 KiB the default; 512 KiB the default; 1024 KiB the default; 2048 KiB the default; 4096 KiB R=2 unit=32K leo8
+
+== 32 KiB, dcb20 (host B)
+   the default: R=4 unit=16K leo8 (0.2400 s, 3.50 copies)
+   the network's own best (stage 3's reading): R=6 unit=8K leo8 [CHANGE]
+   the schedule: R=6 unit=4K leo8 (0.2040 s, 4.53 copies) against the default: faster on 10 of 10 (median +14.55 %), lighter on 0 of 10 (median -32.02 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +14.11 %), lighter on 0
+   HOLDS: not clearly slower than the default
+
+== 64 KiB, dcb20 (host B)
+   the default: R=4 unit=16K leo8 (0.2475 s, 3.45 copies)
+   the network's own best (stage 3's reading): R=6 unit=4K leo8 [CHANGE]
+   the schedule: R=6 unit=4K leo8 (0.2140 s, 4.47 copies) against the default: faster on 10 of 10 (median +13.30 %), lighter on 0 of 10 (median -29.00 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +13.19 %), lighter on 0
+   HOLDS: not clearly slower than the default
+   known answer (the reading's preferred): equal
+
+== 128 KiB, dcb20 (host B)
+   the default: R=4 unit=16K leo8 (0.2565 s, 3.31 copies)
+   the network's own best (stage 3's reading): R=4 unit=16K leo8 [DEFAULT HOLDS]
+   the schedule: R=6 unit=4K leo8 (0.2300 s, 4.38 copies) against the default: faster on 10 of 10 (median +10.33 %), lighter on 0 of 10 (median -32.04 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +10.59 %), lighter on 0
+   HOLDS: not clearly slower than the default
+
+== 256 KiB, dcb20 (host B)
+   the default: R=4 unit=16K leo8 (0.2800 s, 3.12 copies)
+   the network's own best (stage 3's reading): R=4 unit=16K leo8 [DEFAULT HOLDS]
+   the schedule: the default
+
+== 512 KiB, dcb20 (host B)
+   the default: R=3 unit=16K leo8 (0.3340 s, 2.65 copies)
+   the network's own best (stage 3's reading): R=3 unit=16K leo8 [DEFAULT HOLDS]
+   the schedule: the default
+
+== 1024 KiB, dcb20 (host B)
+   the default: R=2 unit=16K leo8 (0.4420 s, 2.34 copies)
+   the network's own best (stage 3's reading): R=2 unit=32K leo8 [CHANGE]
+   the schedule: the default
+
+== 2048 KiB, dcb20 (host B)
+   the default: R=2 unit=16K leo8 (0.6255 s, 2.09 copies)
+   the network's own best (stage 3's reading): R=2 unit=32K leo8 [CHANGE]
+   the schedule: the default
+
+== 4096 KiB, dcb20 (host B)
+   the default: R=2 unit=16K plain (1.1265 s, 1.79 copies)
+   the network's own best (stage 3's reading): R=2 unit=32K leo8 [CHANGE (the author's choice)]
+   the schedule: R=2 unit=32K leo8 (0.8910 s, 1.76 copies) against the default: faster on 10 of 10 (median +21.71 %), lighter on 10 of 10 (median +1.69 %): clearly faster; on seeds 10 to 16 (7): faster on 7 (median +21.71 %), lighter on 7
+   HOLDS: not clearly slower than the default
+
+8 points read, 0 refused; to the author: none; known answer: equal wherever the schedule is the preferred

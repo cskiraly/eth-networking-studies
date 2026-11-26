@@ -1,0 +1,171 @@
+seeds 7 to 16 (stage 3's set chosen on 7 to 9); 0 rows of other seeds not used; SEACAST binary md5 58dff1644574746fd59ce8361db32912; "clearly" faster or lighter: on at least 8 of 10 seeds, paired, and beyond the noise allowance
+note: gossipsub's whole message is a reference outside the rules: unsigned, with the author's peer id and a sequence number on every message, its relays skipping the author (as in u2's Figure 6); SEACAST's cells run Prysm's authorless policy. Its rows carry no binary md5: its binary's md5 was checked before each run
+
+== 32 KiB, dcb20 (host B)
+   noise allowance here: time 10 %, bytes 8 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=6 unit=8K leo8 (0.2120 s, 0.0919 MiB, 4.12 copies; spec UNIT) [the fastest]
+     2. R=6 unit=16K leo8 (0.2200 s, 0.0885 MiB, 3.97 copies; spec -) [the fastest's best neighbour; option: the lighter point's best neighbour]
+     3. R=4 unit=16K leo8 (0.2400 s, 0.0779 MiB, 3.50 copies; spec -) [the lighter point; the base]
+   R=6 unit=8K leo8 against R=6 unit=16K leo8: faster on 8 of 10 (median +5.32 %), lighter on 3 of 10 (median -6.07 %): close; on seeds 10 to 16 (7): faster on 6 (median +5.58 %), lighter on 1
+   R=6 unit=8K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +11.59 %), lighter on 0 of 10 (median -18.57 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +11.67 %), lighter on 0
+   R=6 unit=16K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +7.08 %), lighter on 0 of 10 (median -12.67 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +6.81 %), lighter on 0
+   gossipsub, the whole message (a reference): 0.2555 s, 5.30 copies
+     against the default R=4 unit=16K leo8: faster on 1 of 10 (median -6.25 %), lighter on 0 of 10 (median -51.89 %): clearly heavier; on seeds 10 to 16 (7): faster on 1 (median -12.04 %), lighter on 0
+     against the preferred R=6 unit=8K leo8: faster on 0 of 10 (median -20.03 %), lighter on 0 of 10 (median -30.98 %): clearly slower and clearly heavier; on seeds 10 to 16 (7): faster on 0 (median -26.63 %), lighter on 0
+   the best (the fastest selected setting by the median of ten): R=6 unit=8K leo8
+   BOTH NAMED: against its best neighbour R=6 unit=16K leo8 (1 of its 3 neighbours ok at ten seeds): faster on 8 of 10 (median +5.32 %), lighter on 3 of 10 (median -6.07 %): close; on seeds 10 to 16 (7): faster on 6 (median +5.58 %), lighter on 1; PREFERRED: R=6 unit=8K leo8 (the only one of the two that clears the bar against the default)
+     note: the best is faster than its neighbour on 8 of 10 seeds, within the allowance: by the count alone it would be named alone
+   R=6 unit=8K leo8 (preferred) against the default R=4 unit=16K leo8: faster on 10 of 10 (median +11.59 %), lighter on 0 of 10 (median -18.57 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +11.67 %), lighter on 0
+   R=6 unit=16K leo8 against the default R=4 unit=16K leo8: faster on 10 of 10 (median +7.08 %), lighter on 0 of 10 (median -12.67 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +6.81 %), lighter on 0
+   FOR THE TEXT: CHANGE: the preferred setting is clearly faster than the default, clearly heavier
+
+== 64 KiB, dcb20 (host B)
+   noise allowance here: time 10 %, bytes 8 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=6 unit=4K leo8 (0.2140 s, 0.2001 MiB, 4.47 copies; spec UNIT) [the fastest; option: the lighter point's best neighbour]
+     2. R=8 unit=4K leo8 rfast=8 (0.2165 s, 0.2176 MiB, 4.86 copies; spec UNIT+R_FAST) [the fastest's best neighbour]
+     3. R=6 unit=8K leo8 (0.2210 s, 0.1820 MiB, 4.07 copies; spec UNIT) [the lighter point]
+     4. R=4 unit=16K leo8 (0.2475 s, 0.1544 MiB, 3.45 copies; spec -) [the base]
+   R=6 unit=4K leo8 against R=8 unit=4K leo8 rfast=8: faster on 6 of 10 (median +0.69 %), lighter on 10 of 10 (median +6.97 %): close; on seeds 10 to 16 (7): faster on 4 (median +0.46 %), lighter on 7
+   R=6 unit=4K leo8 against R=6 unit=8K leo8: faster on 10 of 10 (median +2.99 %), lighter on 0 of 10 (median -11.12 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +2.85 %), lighter on 0
+   R=6 unit=4K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +13.30 %), lighter on 0 of 10 (median -29.00 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +13.19 %), lighter on 0
+   R=8 unit=4K leo8 rfast=8 against R=6 unit=8K leo8: faster on 9 of 10 (median +2.69 %), lighter on 0 of 10 (median -19.56 %): clearly heavier; on seeds 10 to 16 (7): faster on 6 (median +2.69 %), lighter on 0
+   R=8 unit=4K leo8 rfast=8 against R=4 unit=16K leo8: faster on 10 of 10 (median +13.59 %), lighter on 0 of 10 (median -42.24 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +14.29 %), lighter on 0
+   R=6 unit=8K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +10.82 %), lighter on 0 of 10 (median -16.44 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +10.26 %), lighter on 0
+   gossipsub, the whole message (a reference): 0.3400 s, 5.26 copies
+     against the default R=4 unit=16K leo8: faster on 0 of 10 (median -36.00 %), lighter on 0 of 10 (median -53.03 %): clearly slower and clearly heavier; on seeds 10 to 16 (7): faster on 0 (median -41.54 %), lighter on 0
+     against the preferred R=6 unit=4K leo8: faster on 0 of 10 (median -58.87 %), lighter on 0 of 10 (median -18.04 %): clearly slower and clearly heavier; on seeds 10 to 16 (7): faster on 0 (median -60.47 %), lighter on 0
+   the best (the fastest selected setting by the median of ten): R=6 unit=4K leo8
+   BOTH NAMED: against its best neighbour R=8 unit=4K leo8 rfast=8 (2 of its 4 neighbours ok at ten seeds): faster on 6 of 10 (median +0.69 %), lighter on 10 of 10 (median +6.97 %): close; on seeds 10 to 16 (7): faster on 4 (median +0.46 %), lighter on 7; PREFERRED: R=6 unit=4K leo8 (the lighter; both clear the bar against the default)
+   R=6 unit=4K leo8 (preferred) against the default R=4 unit=16K leo8: faster on 10 of 10 (median +13.30 %), lighter on 0 of 10 (median -29.00 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +13.19 %), lighter on 0
+   R=8 unit=4K leo8 rfast=8 against the default R=4 unit=16K leo8: faster on 10 of 10 (median +13.59 %), lighter on 0 of 10 (median -42.24 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +14.29 %), lighter on 0
+   FOR THE TEXT: CHANGE: the preferred setting is clearly faster than the default, clearly heavier
+
+== 128 KiB, dcb20 (host B)
+   noise allowance here: time 10 %, bytes 8 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=6 unit=8K leo8 (0.2370 s, 0.3498 MiB, 3.90 copies; spec UNIT) [the fastest's best neighbour]
+     2. R=4 unit=8K leo8 (0.2430 s, 0.3121 MiB, 3.48 copies; spec UNIT) [the fastest]
+     3. R=4 unit=16K leo8 (0.2565 s, 0.2969 MiB, 3.31 copies; spec -) [the base]
+     4. R=3 unit=16K leo8 (0.2720 s, 0.2760 MiB, 3.08 copies; spec -) [the lighter point]
+   R=6 unit=8K leo8 against R=4 unit=8K leo8: faster on 6 of 10 (median +1.43 %), lighter on 0 of 10 (median -11.03 %): clearly heavier; on seeds 10 to 16 (7): faster on 5 (median +2.86 %), lighter on 0
+   R=6 unit=8K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +7.65 %), lighter on 0 of 10 (median -17.02 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +7.84 %), lighter on 0
+   R=6 unit=8K leo8 against R=3 unit=16K leo8: faster on 10 of 10 (median +13.36 %), lighter on 0 of 10 (median -30.49 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +13.60 %), lighter on 0
+   R=4 unit=8K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +5.34 %), lighter on 1 of 10 (median -5.89 %): close; on seeds 10 to 16 (7): faster on 7 (median +5.22 %), lighter on 1
+   R=4 unit=8K leo8 against R=3 unit=16K leo8: faster on 10 of 10 (median +12.01 %), lighter on 0 of 10 (median -15.00 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +10.97 %), lighter on 0
+   R=4 unit=16K leo8 against R=3 unit=16K leo8: faster on 10 of 10 (median +6.44 %), lighter on 2 of 10 (median -9.48 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +6.43 %), lighter on 1
+   the best (the fastest selected setting by the median of ten): R=4 unit=8K leo8
+     faster by the median of ten, not selected: R=6 unit=8K leo8
+   BOTH NAMED: against its best neighbour R=6 unit=8K leo8 (2 of its 4 neighbours ok at ten seeds): faster on 3 of 10 (median -1.46 %), lighter on 10 of 10 (median +9.94 %): clearly lighter; on seeds 10 to 16 (7): faster on 1 (median -2.94 %), lighter on 7; PREFERRED: R=4 unit=8K leo8 (the lighter; neither clears the bar against the default)
+   R=4 unit=8K leo8 (preferred) against the default R=4 unit=16K leo8: faster on 10 of 10 (median +5.34 %), lighter on 1 of 10 (median -5.89 %): close; on seeds 10 to 16 (7): faster on 7 (median +5.22 %), lighter on 1
+   R=6 unit=8K leo8 against the default R=4 unit=16K leo8: faster on 10 of 10 (median +7.65 %), lighter on 0 of 10 (median -17.02 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +7.84 %), lighter on 0
+   FOR THE TEXT: DEFAULT HOLDS: the preferred setting is close in time to the default
+   FOR THE AUTHOR: SPLIT: R=3 unit=16K leo8, not named, clears the bar against the default; the outcome follows the named settings
+
+== 256 KiB, dcb20 (host B)
+   noise allowance here: time 10 %, bytes 8 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=4 unit=8K leo8 (0.2690 s, 0.5873 MiB, 3.27 copies; spec UNIT) [the fastest]
+     2. R=6 unit=8K leo8 (0.2700 s, 0.6638 MiB, 3.70 copies; spec UNIT) [the fastest's best neighbour]
+     3. R=4 unit=16K leo8 (0.2800 s, 0.5593 MiB, 3.12 copies; spec -) [the base]
+     4. R=1 unit=64K leo8 (0.5370 s, 0.3909 MiB, 2.18 copies; spec UNIT+MAX_SEGMENT_SIZE) [the lighter point]
+   R=4 unit=8K leo8 against R=6 unit=8K leo8: faster on 5 of 10 (median +0.18 %), lighter on 10 of 10 (median +11.07 %): clearly lighter; on seeds 10 to 16 (7): faster on 4 (median +0.37 %), lighter on 7
+   R=4 unit=8K leo8 against R=4 unit=16K leo8: faster on 10 of 10 (median +4.35 %), lighter on 0 of 10 (median -3.42 %): close; on seeds 10 to 16 (7): faster on 7 (median +4.59 %), lighter on 0
+   R=4 unit=8K leo8 against R=1 unit=64K leo8: faster on 10 of 10 (median +50.14 %), lighter on 0 of 10 (median -49.83 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +50.47 %), lighter on 0
+   R=6 unit=8K leo8 against R=4 unit=16K leo8: faster on 9 of 10 (median +3.94 %), lighter on 0 of 10 (median -17.25 %): clearly heavier; on seeds 10 to 16 (7): faster on 6 (median +3.94 %), lighter on 0
+   R=6 unit=8K leo8 against R=1 unit=64K leo8: faster on 10 of 10 (median +49.86 %), lighter on 0 of 10 (median -71.89 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +50.09 %), lighter on 0
+   R=4 unit=16K leo8 against R=1 unit=64K leo8: faster on 10 of 10 (median +47.72 %), lighter on 0 of 10 (median -45.51 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +48.04 %), lighter on 0
+   the best (the fastest selected setting by the median of ten): R=4 unit=8K leo8
+   BOTH NAMED: against its best neighbour R=6 unit=8K leo8 (2 of its 4 neighbours ok at ten seeds): faster on 5 of 10 (median +0.18 %), lighter on 10 of 10 (median +11.07 %): clearly lighter; on seeds 10 to 16 (7): faster on 4 (median +0.37 %), lighter on 7; PREFERRED: R=4 unit=8K leo8 (the lighter; neither clears the bar against the default)
+   R=4 unit=8K leo8 (preferred) against the default R=4 unit=16K leo8: faster on 10 of 10 (median +4.35 %), lighter on 0 of 10 (median -3.42 %): close; on seeds 10 to 16 (7): faster on 7 (median +4.59 %), lighter on 0
+   R=6 unit=8K leo8 against the default R=4 unit=16K leo8: faster on 9 of 10 (median +3.94 %), lighter on 0 of 10 (median -17.25 %): clearly heavier; on seeds 10 to 16 (7): faster on 6 (median +3.94 %), lighter on 0
+   FOR THE TEXT: DEFAULT HOLDS: the preferred setting is close in time to the default
+
+== 512 KiB, dcb20 (host B)
+   noise allowance here: time 6 %, bytes 3 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=3 unit=16K leo8 (0.3340 s, 0.9500 MiB, 2.65 copies; spec -) [the base]
+     2. R=4 unit=8K leo8 (0.3340 s, 1.1185 MiB, 3.12 copies; spec UNIT) [the fastest; option: the lighter point's best neighbour]
+     3. R=4 unit=16K leo8 (0.3345 s, 1.0391 MiB, 2.90 copies; spec -) [the lighter point; the fastest's best neighbour]
+   R=3 unit=16K leo8 against R=4 unit=8K leo8: faster on 3 of 10 (median -0.45 %), lighter on 10 of 10 (median +15.59 %): clearly lighter; on seeds 10 to 16 (7): faster on 2 (median -0.30 %), lighter on 7
+   R=3 unit=16K leo8 against R=4 unit=16K leo8: faster on 5 of 10 (median +0.44 %), lighter on 10 of 10 (median +9.00 %): clearly lighter; on seeds 10 to 16 (7): faster on 4 (median +0.89 %), lighter on 7
+   R=4 unit=8K leo8 against R=4 unit=16K leo8: faster on 8 of 10 (median +1.05 %), lighter on 0 of 10 (median -7.82 %): clearly heavier; on seeds 10 to 16 (7): faster on 6 (median +1.48 %), lighter on 0
+   the best (the fastest selected setting by the median of ten): R=4 unit=8K leo8
+     as fast by the median of ten and lighter, not selected: R=3 unit=16K leo8
+   BOTH NAMED: against its best neighbour R=4 unit=16K leo8 (1 of its 4 neighbours ok at ten seeds): faster on 8 of 10 (median +1.05 %), lighter on 0 of 10 (median -7.82 %): clearly heavier; on seeds 10 to 16 (7): faster on 6 (median +1.48 %), lighter on 0; PREFERRED: R=4 unit=16K leo8 (the lighter; neither clears the bar against the default)
+     note: the best is faster than its neighbour on 8 of 10 seeds, within the allowance: by the count alone it would be named alone
+   R=4 unit=8K leo8 against the default R=3 unit=16K leo8: faster on 7 of 10 (median +0.45 %), lighter on 0 of 10 (median -18.47 %): clearly heavier; on seeds 10 to 16 (7): faster on 5 (median +0.30 %), lighter on 0
+   R=4 unit=16K leo8 (preferred) against the default R=3 unit=16K leo8: faster on 2 of 10 (median -0.45 %), lighter on 0 of 10 (median -9.89 %): clearly heavier; on seeds 10 to 16 (7): faster on 1 (median -0.90 %), lighter on 0
+   FOR THE TEXT: DEFAULT HOLDS: the preferred setting is close in time to the default, clearly heavier
+
+== 1024 KiB, dcb20 (host B)
+   noise allowance here: time 6 %, bytes 3 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=2 unit=16K leo8 (0.4420 s, 1.6685 MiB, 2.34 copies; spec -) [the fastest; the base; option: the lighter point's best neighbour]
+     2. R=2 unit=32K leo8 (0.4585 s, 1.5690 MiB, 2.20 copies; spec UNIT) [the lighter point]
+     3. R=3 unit=16K leo8 (0.4630 s, 1.8493 MiB, 2.60 copies; spec -) [the fastest's best neighbour]
+   R=2 unit=16K leo8 against R=2 unit=32K leo8: faster on 10 of 10 (median +3.27 %), lighter on 0 of 10 (median -5.10 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +3.25 %), lighter on 0
+   R=2 unit=16K leo8 against R=3 unit=16K leo8: faster on 6 of 10 (median +1.09 %), lighter on 10 of 10 (median +9.47 %): clearly lighter; on seeds 10 to 16 (7): faster on 5 (median +1.56 %), lighter on 7
+   R=2 unit=32K leo8 against R=3 unit=16K leo8: faster on 1 of 10 (median -2.52 %), lighter on 10 of 10 (median +14.00 %): clearly lighter; on seeds 10 to 16 (7): faster on 1 (median -1.79 %), lighter on 7
+   the best (the fastest selected setting by the median of ten): R=2 unit=16K leo8
+   BOTH NAMED: against its best neighbour R=2 unit=32K leo8 (2 of its 4 neighbours ok at ten seeds): faster on 10 of 10 (median +3.27 %), lighter on 0 of 10 (median -5.10 %): clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +3.25 %), lighter on 0; PREFERRED: R=2 unit=32K leo8 (the only one of the two that clears the bar against the default)
+     note: the best is faster than its neighbour on 10 of 10 seeds, within the allowance: by the count alone it would be named alone
+   R=2 unit=16K leo8 is the default
+   R=2 unit=32K leo8 (preferred) against the default R=2 unit=16K leo8: faster on 0 of 10 (median -3.38 %), lighter on 10 of 10 (median +4.85 %): clearly lighter; on seeds 10 to 16 (7): faster on 0 (median -3.36 %), lighter on 7
+   FOR THE TEXT: CHANGE: the preferred setting is clearly lighter than the default and close in time
+
+== 2048 KiB, dcb20 (host B)
+   noise allowance here: time 6 %, bytes 3 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=2 unit=32K leo8 (0.6150 s, 2.8274 MiB, 1.99 copies; spec UNIT) [the fastest; option: the lighter point's best neighbour]
+     2. R=2 unit=16K leo8 (0.6255 s, 2.9697 MiB, 2.09 copies; spec -) [the base]
+     3. R=3 unit=32K leo8 (0.6285 s, 2.9764 MiB, 2.09 copies; spec UNIT) [the fastest's best neighbour]
+     4. R=1 unit=32K leo8 (0.6640 s, 2.7147 MiB, 1.91 copies; spec UNIT) [the lighter point]
+   R=2 unit=32K leo8 against R=2 unit=16K leo8: faster on 6 of 10 (median +0.40 %), lighter on 10 of 10 (median +4.30 %): clearly lighter; on seeds 10 to 16 (7): faster on 4 (median +0.18 %), lighter on 7
+   R=2 unit=32K leo8 against R=3 unit=32K leo8: faster on 9 of 10 (median +1.64 %), lighter on 10 of 10 (median +4.53 %): clearly lighter; on seeds 10 to 16 (7): faster on 6 (median +1.29 %), lighter on 7
+   R=2 unit=32K leo8 against R=1 unit=32K leo8: faster on 10 of 10 (median +7.75 %), lighter on 0 of 10 (median -5.46 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +6.53 %), lighter on 0
+   R=2 unit=16K leo8 against R=3 unit=32K leo8: faster on 8 of 10 (median +2.04 %), lighter on 7 of 10 (median +0.22 %): close; on seeds 10 to 16 (7): faster on 6 (median +1.98 %), lighter on 4
+   R=2 unit=16K leo8 against R=1 unit=32K leo8: faster on 10 of 10 (median +6.58 %), lighter on 0 of 10 (median -10.40 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +6.13 %), lighter on 0
+   R=3 unit=32K leo8 against R=1 unit=32K leo8: faster on 10 of 10 (median +6.34 %), lighter on 0 of 10 (median -11.13 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 7 (median +5.07 %), lighter on 0
+   the best (the fastest selected setting by the median of ten): R=2 unit=32K leo8
+   BOTH NAMED: against its best neighbour R=2 unit=16K leo8 (3 of its 4 neighbours ok at ten seeds): faster on 6 of 10 (median +0.40 %), lighter on 10 of 10 (median +4.30 %): clearly lighter; on seeds 10 to 16 (7): faster on 4 (median +0.18 %), lighter on 7; PREFERRED: R=2 unit=32K leo8 (the only one of the two that clears the bar against the default)
+   R=2 unit=32K leo8 (preferred) against the default R=2 unit=16K leo8: faster on 6 of 10 (median +0.40 %), lighter on 10 of 10 (median +4.30 %): clearly lighter; on seeds 10 to 16 (7): faster on 4 (median +0.18 %), lighter on 7
+   R=2 unit=16K leo8 is the default
+   FOR THE TEXT: CHANGE: the preferred setting is clearly lighter than the default and close in time
+
+== 4096 KiB, dcb20 (host B)
+   noise allowance here: time 6 %, bytes 3 %; clear: on at least 8 of 10 seeds and beyond it
+   the set at ten seeds, by the median of ten:
+     1. R=2 unit=32K leo8 (0.8910 s, 5.0171 MiB, 1.76 copies; spec UNIT) [the fastest]
+     2. R=2 unit=64K leo8 (0.9075 s, 4.9503 MiB, 1.74 copies; spec UNIT+MAX_SEGMENT_SIZE) [the fastest's best neighbour; option: the lighter point's best neighbour]
+     3. R=1 unit=64K leo8 (0.9420 s, 4.7970 MiB, 1.69 copies; spec UNIT+MAX_SEGMENT_SIZE) [the lighter point]
+     4. R=2 unit=16K plain (1.1265 s, 5.1058 MiB, 1.79 copies; spec -) [the base]
+   R=2 unit=32K leo8 against R=2 unit=64K leo8: faster on 9 of 10 (median +2.98 %), lighter on 1 of 10 (median -1.02 %): close; on seeds 10 to 16 (7): faster on 6 (median +2.66 %), lighter on 1
+   R=2 unit=32K leo8 against R=1 unit=64K leo8: faster on 9 of 10 (median +6.19 %), lighter on 0 of 10 (median -4.27 %): clearly faster and clearly heavier; on seeds 10 to 16 (7): faster on 6 (median +5.90 %), lighter on 0
+   R=2 unit=32K leo8 against R=2 unit=16K plain: faster on 10 of 10 (median +21.71 %), lighter on 10 of 10 (median +1.69 %): clearly faster; on seeds 10 to 16 (7): faster on 7 (median +21.71 %), lighter on 7
+   R=2 unit=64K leo8 against R=1 unit=64K leo8: faster on 8 of 10 (median +3.37 %), lighter on 1 of 10 (median -3.33 %): clearly heavier; on seeds 10 to 16 (7): faster on 5 (median +3.33 %), lighter on 1
+   R=2 unit=64K leo8 against R=2 unit=16K plain: faster on 10 of 10 (median +19.08 %), lighter on 10 of 10 (median +2.87 %): clearly faster; on seeds 10 to 16 (7): faster on 7 (median +19.66 %), lighter on 7
+   R=1 unit=64K leo8 against R=2 unit=16K plain: faster on 10 of 10 (median +16.14 %), lighter on 10 of 10 (median +5.55 %): clearly faster and clearly lighter; on seeds 10 to 16 (7): faster on 7 (median +16.22 %), lighter on 7
+   the best (the fastest selected setting by the median of ten): R=2 unit=32K leo8
+   BOTH NAMED: against its best neighbour R=2 unit=64K leo8 (1 of its 4 neighbours ok at ten seeds): faster on 9 of 10 (median +2.98 %), lighter on 1 of 10 (median -1.02 %): close; on seeds 10 to 16 (7): faster on 6 (median +2.66 %), lighter on 1; PREFERRED: R=2 unit=64K leo8 (the lighter; both clear the bar against the default)
+     note: the best is faster than its neighbour on 9 of 10 seeds, within the allowance: by the count alone it would be named alone
+   R=2 unit=32K leo8 against the default R=2 unit=16K plain: faster on 10 of 10 (median +21.71 %), lighter on 10 of 10 (median +1.69 %): clearly faster; on seeds 10 to 16 (7): faster on 7 (median +21.71 %), lighter on 7
+   R=2 unit=64K leo8 (preferred) against the default R=2 unit=16K plain: faster on 10 of 10 (median +19.08 %), lighter on 10 of 10 (median +2.87 %): clearly faster; on seeds 10 to 16 (7): faster on 7 (median +19.66 %), lighter on 7
+   FOR THE TEXT: CHANGE: the preferred setting is clearly faster than the default, close in bytes
+   FOR THE AUTHOR: PREFERRED NOT SELECTED: the change goes to R=2 unit=64K leo8, the best's neighbour, not a setting stage 2 selected
+
+8 points read, 0 refused
+point | the default | the preferred (spec) | named | against the default: time, bytes (faster, lighter of 10) | outcome
+32 KiB dcb20 | 0.2400 s, 3.50 copies | R=6 unit=8K leo8 (0.2120 s, 4.12 copies; UNIT) | both with R=6 unit=16K leo8 | 11.59 %, -18.57 % (10, 0): clearly faster and clearly heavier | CHANGE
+64 KiB dcb20 | 0.2475 s, 3.45 copies | R=6 unit=4K leo8 (0.2140 s, 4.47 copies; UNIT) | both with R=8 unit=4K leo8 rfast=8 | 13.30 %, -29.00 % (10, 0): clearly faster and clearly heavier | CHANGE
+128 KiB dcb20 | 0.2565 s, 3.31 copies | R=4 unit=8K leo8 (0.2430 s, 3.48 copies; UNIT) | both with R=6 unit=8K leo8 | 5.34 %, -5.89 % (10, 1): close | DEFAULT HOLDS (flagged)
+256 KiB dcb20 | 0.2800 s, 3.12 copies | R=4 unit=8K leo8 (0.2690 s, 3.27 copies; UNIT) | both with R=6 unit=8K leo8 | 4.35 %, -3.42 % (10, 0): close | DEFAULT HOLDS
+512 KiB dcb20 | 0.3340 s, 2.65 copies | R=4 unit=16K leo8 (0.3345 s, 2.90 copies; -) | both with R=4 unit=8K leo8 | -0.45 %, -9.89 % (2, 0): clearly heavier | DEFAULT HOLDS
+1024 KiB dcb20 | 0.4420 s, 2.34 copies | R=2 unit=32K leo8 (0.4585 s, 2.20 copies; UNIT) | both with R=2 unit=16K leo8 | -3.38 %, 4.85 % (0, 10): clearly lighter | CHANGE
+2048 KiB dcb20 | 0.6255 s, 2.09 copies | R=2 unit=32K leo8 (0.6150 s, 1.99 copies; UNIT) | both with R=2 unit=16K leo8 | 0.40 %, 4.30 % (6, 10): clearly lighter | CHANGE
+4096 KiB dcb20 | 1.1265 s, 1.79 copies | R=2 unit=64K leo8 (0.9075 s, 1.74 copies; UNIT+MAX_SEGMENT_SIZE) | both with R=2 unit=32K leo8 | 19.08 %, 2.87 % (10, 10): clearly faster | CHANGE (flagged)
+CHANGE: 5: 32 KiB dcb20; 64 KiB dcb20; 1024 KiB dcb20; 2048 KiB dcb20; 4096 KiB dcb20 (flagged)
+DEFAULT HOLDS: 3: 128 KiB dcb20 (flagged); 256 KiB dcb20; 512 KiB dcb20
+FOR THE AUTHOR: 0
+NO COMPARISON: 0
